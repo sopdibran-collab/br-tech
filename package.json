@@ -1,0 +1,14 @@
+{
+  "name": "br-tech-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site internet BR Tech Sàrl — ventilation Suisse romande",
+  "scripts": {
+    "dev": "echo \"Phase 3 non initialisée — valider Phase 2 puis scaffolder Next.js\"",
+    "build": "echo \"Phase 3 non initialisée\"",
+    "start": "echo \"Phase 3 non initialisée\""
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
