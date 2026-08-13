@@ -683,13 +683,23 @@ Aucun texte, filet, picto ou bord de coupe dans cette zone.
 | Horizontal compact | Icône + BR TECH (une ligne) | Header mobile, signature mail |
 | Empilé | Icône au-dessus du wordmark | Carrés sociaux, signalétique |
 
-### Fichiers à produire (kit)
-- `BR-Tech_Logo_Primary.svg / .png / .pdf`  
-- `BR-Tech_Logo_Mono-Navy.svg`  
-- `BR-Tech_Logo_Mono-White.svg`  
-- `BR-Tech_Icon.svg`  
-- `BR-Tech_Favicon.ico` (32 / 16)  
-- Versions CMYK PDF pour print  
+### Kit logo livré
+
+Dossier repo : [`assets/logo/`](../../assets/logo/) — index dans [`assets/logo/README.md`](../../assets/logo/README.md).
+
+| Fichier | Formats | Statut |
+|---|---|---|
+| `principale/BR-Tech_Logo_Primary` | SVG · PNG · JPG | ✅ |
+| `responsive/BR-Tech_Logo_Horizontal` | SVG · PNG · JPG | ✅ |
+| `submark/BR-Tech_Logo_Submark` | SVG · PNG · JPG | ✅ |
+| `monochrome-noir/BR-Tech_Logo_Mono-Noir` | SVG · PNG · JPG | ✅ |
+| `monochrome-blanc/BR-Tech_Logo_Mono-Blanc` | SVG · PNG · JPG | ✅ |
+| `niveaux-de-gris/BR-Tech_Logo_Grayscale` | SVG · PNG · JPG | ✅ |
+| `couleur-inversee/BR-Tech_Logo_Inverse` | SVG · PNG · JPG | ✅ |
+| `favicon/BR-Tech_Favicon` | SVG · PNG (96×96) · JPG | ✅ carré — tailles 16/32/180/512 + `.ico` à générer en Phase 3 |
+| Planche déclinaisons | PNG | ✅ `_reference/` |
+
+Restant print : versions CMYK PDF si besoin imprimerie.
 
 ---
 
@@ -1271,7 +1281,7 @@ Promotions agressives type « -50 % cette semaine », memes, polémiques, photos
 
 ## Phase 0 — Fondation (0–1 mois)
 - Validation Brand Book v1.0  
-- Kit logo final (SVG/PDF toutes déclinaisons)  
+- Kit logo final (SVG/PNG/JPG — `assets/logo/`) ✅ ; PDF CMYK print optionnel  
 - Templates devis / rapport / signature mail  
 - GBP optimisé + photos réelles  
 

@@ -27,7 +27,9 @@ br-tech/
 │   ├── brand/          ← Brand Book
 │   ├── ux/             ← Phase 1
 │   └── ui/             ← Phase 2 Design System
-├── assets/visuels/     ← Maquettes
+├── assets/
+│   ├── logo/           ← Kit logo (SVG/PNG/JPG + planche)
+│   └── visuels/        ← Maquettes
 └── src/                ← Code (Phase 3)
 ```
 

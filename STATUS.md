@@ -1,6 +1,6 @@
 # STATUS — BR Tech Website
 
-**Dernière mise à jour :** 2026-07-28  
+**Dernière mise à jour :** 2026-07-30  
 **Environnement de travail cible :** Local (Cursor Desktop)  
 **Dossier projet local :** `/Users/dibransopj/Documents/Github/br-tech-website`
 
@@ -13,6 +13,7 @@
 - [x] Phase 2 Design System documenté
 - [x] Maquettes Phase 2 (Desktop, Laptop, Tablet, Mobile, planche DS)
 - [x] Destination locale `br-tech-website/` créée + Git initialisé
+- [x] Kit logo intégré (`assets/logo/` — toutes déclinaisons SVG/PNG/JPG)
 
 ## En attente
 
@@ -21,7 +22,12 @@
 - [ ] Décision section Chiffres (data réelles / alternative / suppression)
 - [ ] Confirmation copy checklist hero (« Devis gratuit », « Intervention rapide »)
 - [ ] Photos chantier réelles
-- [ ] Remote Git (GitHub/GitLab) pour sync local
+- [x] Favicon carré SVG · PNG (96×96) · JPG (`assets/logo/favicon/`)
+- [x] Proposition mockups Phase 2.1 (`assets/visuels/phase2-v2/`)
+- [ ] Choisir direction UI : Phase 2 **ou** Phase 2.1 (v2)
+- [x] Fichier Figma Design System & Maquettes : https://www.figma.com/design/tgdNkuqg78irYGVcXPceOX
+- [ ] Compléter composants restants + liens Prototype dans Figma
+- [ ] Générer tailles 16/32/180/512 + `.ico` depuis le PNG (Phase 3)
 
 ## Prochaine action
 
