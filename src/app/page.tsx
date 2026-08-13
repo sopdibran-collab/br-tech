@@ -33,12 +33,12 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src={heroPhoto}
-            alt="Gaines de ventilation rectangulaires sous plafond vitré, lumière naturelle — visuel d’ambiance, photographie de chantier à venir"
+            alt="Gaine de ventilation rectangulaire continue sous plafond vitré, lumière naturelle — visuel d’ambiance, photographie de chantier à venir"
             fill
             priority
             placeholder="blur"
             sizes="100vw"
-            className="object-cover object-[52%_42%] md:object-[68%_46%]"
+            className="object-cover object-[50%_32%] md:object-[58%_28%]"
           />
         </div>
         <div className="hero-veil absolute inset-0" aria-hidden />
