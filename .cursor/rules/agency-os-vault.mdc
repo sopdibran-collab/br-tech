@@ -1,0 +1,60 @@
+---
+description: Agency OS vault — obligatoire avant toute conception UI / audit / SEO / code site
+alwaysApply: true
+---
+
+# Agency OS → ce repo (BR Tech)
+
+## Vault (source de vérité métier)
+
+`/Users/dibransopj/Documents/WEBDEV/AI Agency OS`
+
+Client Obsidian : **BR Tech**  
+Fiche : `04 Clients/BR Tech Sàrl/00 - BR Tech Sàrl.md`  
+Projet : `03 Projects/BR Tech Sàrl/00 - Projet BR Tech Sàrl.md`
+
+## Avant TOUTE conception web (UI, copy, SEO, refonte, Phase design/code)
+
+Lecture obligatoire (ordre) — MCP Obsidian ou fichiers directs :
+
+1. `AGENTS.md` (ce repo) — rôles des outils + prestations + bloquants
+2. Fiche client vault ci-dessus
+3. `02 System/Cursor/01 - Workflow Cursor.md`
+4. `02 System/Workflows/05 - Feuille de route conception site.md`
+5. `01 Knowledge/Design/01 - Design Philosophy.md`
+6. `06 References/Checks/00 - Checks Index.md` (+ Scan & fold, Anti AI template, Trust signals, Primary CTA)
+7. Notes mission (SEO, Conversion B2B, Typography, Colors…) selon la tâche
+8. Brand Book / Phase 1 / Phase 2 **dans ce repo** — alignés sur la fiche, pas l’inverse
+
+Skill Cursor : `ai-agency-os`. Rule globale : `ai-agency-os-bridge`.
+
+## SEO / GEO / AEO (obligatoire avant copy d’arborescence)
+
+1. Lexique `docs/seo/LEXIQUE-METIER.md`
+2. Run Engine : repo `swiss-construction-intelligence` (outil transverse, pas le site)
+3. Synthèse → `docs/seo/BRIEF-ENGINE.md` + vault projet
+4. Appliquer **uniquement ici**
+
+Détail : `docs/ops/ENGINE-SEO-GEO-AEO.md`
+
+## Priorité des sources
+
+1. Obsidian `04 Clients` / `03 Projects`
+2. `.cursor/project-context/` (miroir)
+3. Docs brand / design dans ce repo
+4. Spec Kit `specs/` (feature en cours) + `.specify/memory/constitution.md`
+5. Code existant
+
+Conflit métier / NAP / preuves / hex → **Obsidian gagne**.  
+Spec Kit ne remplace pas la fiche. Protocole vault : `02 System/Cursor/05 - Spec Kit.md`.
+
+## Interdit
+
+- Inventer contacts, chiffres, avis, certifications
+- Appliquer la charte d’un autre client
+- Imposer Payload/CMS si non prévu
+- Démarrer du code hors brief / hors phase validée (lire fiche projet)
+
+## Nouveau matériel reçu dans le chat
+
+Classer d’abord dans le vault (`02 System/Cursor/03 - Capture client chat.md`), puis refléter ici si besoin.

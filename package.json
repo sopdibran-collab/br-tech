@@ -4,11 +4,31 @@
   "private": true,
   "description": "Site internet BR Tech Sàrl — ventilation Suisse romande",
   "scripts": {
-    "dev": "echo \"Phase 3 non initialisée — valider Phase 2 puis scaffolder Next.js\"",
-    "build": "echo \"Phase 3 non initialisée\"",
-    "start": "echo \"Phase 3 non initialisée\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.544.0",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

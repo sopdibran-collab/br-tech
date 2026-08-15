@@ -1,0 +1,51 @@
+{
+  "version": "project.br-tech.v0.1",
+  "project": {
+    "name": "BR Tech",
+    "country_code": "CH",
+    "market_slug": "construction-building-services",
+    "languages": ["fr-CH"],
+    "status": "active",
+    "algorithm_bundle_version": "algorithm_bundle.v0.1"
+  },
+  "company_profile": {
+    "legal_name": "BR Tech Sàrl",
+    "brand_terms": ["BR Tech", "BR Tech Sàrl", "BrTech"],
+    "excluded_topics": [
+      "painting",
+      "cleaning",
+      "plastering",
+      "carpentry",
+      "heating",
+      "plumbing",
+      "sanitary",
+      "sprinkler",
+      "fire-protection"
+    ],
+    "customer_value": null,
+    "estimated_conversion_rate": null,
+    "domain_slugs": ["hvac", "maintenance"],
+    "service_slugs": ["ventilation", "maintenance-hvac", "maintenance"],
+    "geo": [
+      { "type": "canton", "code": "VD", "priority": 10 },
+      { "type": "city", "name": "Renens", "priority": 11 },
+      { "type": "city", "name": "Lausanne", "priority": 12 },
+      { "type": "city", "name": "Nyon", "priority": 20 },
+      { "type": "city", "name": "Vevey", "priority": 21 },
+      { "type": "city", "name": "Montreux", "priority": 22 },
+      { "type": "city", "name": "Yverdon-les-Bains", "priority": 30 }
+    ]
+  },
+  "site": {
+    "domain": "brtech.ch",
+    "repo": "sopdibran-collab/br-tech",
+    "local_path": "/Users/dibransopj/Documents/Github/br-tech-website",
+    "status": "not_live"
+  },
+  "notes": [
+    "Spécialiste ventilation — ne pas diluer en CVC généraliste.",
+    "Pages /zones/* seulement si territoire d'intervention confirmé (Genève non inclus tant que non confirmé).",
+    "Site neuf : pas de GSC. Relancer l'Engine après go-live.",
+    "Copier ce fichier vers swiss-construction-intelligence/data/seed/projects/br-tech.v0.1.json puis étendre load-seed.ts (aujourd'hui Sopjani seulement)."
+  ]
+}

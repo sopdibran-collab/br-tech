@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --brt-primary: #0e4a8c;
+  --brt-primary-hover: #0a3a70;
+  --brt-primary-active: #08305c;
+  --brt-primary-subtle: #e8f1f8;
+  --brt-navy: #1b3147;
+  --brt-ink: #2a2f36;
+  --brt-ink-secondary: #5c6670;
+  --brt-ink-muted: #8a949e;
+  --brt-line: #c9d3dc;
+  --brt-surface: #ffffff;
+  --brt-surface-page: #f7f9fb;
+  --brt-surface-muted: #e8eef3;
+  --brt-success: #1f7a6c;
+  --brt-danger: #8b2e2e;
+  --shadow-focus: 0 0 0 3px rgba(14, 74, 140, 0.25);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@theme inline {
+  --color-primary: var(--brt-primary);
+  --color-primary-hover: var(--brt-primary-hover);
+  --color-primary-subtle: var(--brt-primary-subtle);
+  --color-navy: var(--brt-navy);
+  --color-ink: var(--brt-ink);
+  --color-ink-secondary: var(--brt-ink-secondary);
+  --color-ink-muted: var(--brt-ink-muted);
+  --color-line: var(--brt-line);
+  --color-surface: var(--brt-surface);
+  --color-surface-page: var(--brt-surface-page);
+  --color-surface-muted: var(--brt-surface-muted);
+  --color-success: var(--brt-success);
+  --color-danger: var(--brt-danger);
+  --font-sans: var(--font-ibm-plex-sans);
+  --font-display: var(--font-outfit);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--brt-surface-page);
+  color: var(--brt-ink);
+  font-family: var(--font-ibm-plex-sans), system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+/* Gris échantillonnés sur le still-life hero — le visuel se fond dans le champ */
+.hero-studio {
+  background: #e5e4e6;
+  background: linear-gradient(180deg, #e7e7e9 0%, #d7d7d9 55%, #c6c4c4 100%);
+}
+
+.hero-veil {
+  background: linear-gradient(
+    90deg,
+    rgb(231 231 233 / 0.97) 0%,
+    rgb(231 231 233 / 0.88) 34%,
+    rgb(215 215 217 / 0.28) 58%,
+    rgb(215 215 217 / 0) 76%
+  );
+}
+
+@media (max-width: 767px) {
+  .hero-veil {
+    background: linear-gradient(
+      180deg,
+      rgb(231 231 233 / 0.96) 0%,
+      rgb(231 231 233 / 0.82) 42%,
+      rgb(215 215 217 / 0.28) 72%,
+      rgb(215 215 217 / 0) 100%
+    );
+  }
+}
+
