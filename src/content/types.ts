@@ -9,8 +9,6 @@ export type ContentSection = {
   body: string;
 };
 
-export type SchemaIllustration = "airflow" | "double-flux" | "maintenance" | "depannage";
-
 export type RelatedLink = {
   label: string;
   href: string;
@@ -28,5 +26,4 @@ export type ServicePageContent = {
   faq: readonly FaqItem[];
   related: readonly RelatedLink[];
   includeLausanne?: boolean;
-  illustration?: SchemaIllustration;
 };

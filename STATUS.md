@@ -16,7 +16,7 @@
 - [x] Instructions agent + project-context + Engine profil
 - [x] **Phase 3.0** Next.js 16 : accueil 2.1, contact, légal, IndexNow, sitemap (`npm run build` OK)
 - [x] **Phase 3.1** hub `/services/` + installation + double-flux + dépannage + `/maintenance/` (pas de `/zones/*`)
-- [x] Icônes SVG line (métier) + schémas techniques vectoriels — **pas** Corporate Memphis / Alegria (Brand Book §18)
+- [x] Icônes SVG line (métier) — **pas** d’illustrations cartoon / Alegria (Brand Book §18)
 
 ## En attente
 

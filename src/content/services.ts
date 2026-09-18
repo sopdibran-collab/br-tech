@@ -64,7 +64,6 @@ export const installationPage: ServicePageContent = {
   serviceName: "Installation de ventilation",
   contactType: "installation",
   includeLausanne: true,
-  illustration: "airflow",
   sections: [
     {
       title: "Pour qui",
@@ -133,7 +132,6 @@ export const doubleFluxPage: ServicePageContent = {
   serviceName: "Installation de VMC double flux",
   contactType: "double-flux",
   includeLausanne: true,
-  illustration: "double-flux",
   sections: [
     {
       title: "Simple flux ou double flux",
@@ -197,7 +195,6 @@ export const depannagePage: ServicePageContent = {
   serviceName: "Dépannage de ventilation",
   contactType: "depannage",
   includeLausanne: true,
-  illustration: "depannage",
   sections: [
     {
       title: "Quand appeler",

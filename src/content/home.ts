@@ -64,12 +64,36 @@ export const home = {
     title: "De la visite à l’entretien",
     lead: "Une affaire se tient dans cet ordre.",
     steps: [
-      { title: "Visite technique", text: "Relevé sur site, contraintes et besoins." },
-      { title: "Analyse", text: "Dimensionnement et options expliquées." },
-      { title: "Offre", text: "Devis lisible, périmètre et délais." },
-      { title: "Installation", text: "Pose soignée, chantier net." },
-      { title: "Mise en service", text: "Réglages, mesures, documentation." },
-      { title: "Maintenance", text: "Suivi préventif après réception." },
+      {
+        title: "Visite technique",
+        text: "Relevé sur site, contraintes et besoins.",
+        icon: "pin",
+      },
+      {
+        title: "Analyse",
+        text: "Dimensionnement et options expliquées.",
+        icon: "building",
+      },
+      {
+        title: "Offre",
+        text: "Devis lisible, périmètre et délais.",
+        icon: "clipboard",
+      },
+      {
+        title: "Installation",
+        text: "Pose soignée, chantier net.",
+        icon: "flow",
+      },
+      {
+        title: "Mise en service",
+        text: "Réglages, mesures, documentation.",
+        icon: "energy",
+      },
+      {
+        title: "Maintenance",
+        text: "Suivi préventif après réception.",
+        icon: "filter",
+      },
     ],
     reception:
       "À la réception : documentation, mesures de débit, chantier rangé, plan d’entretien.",

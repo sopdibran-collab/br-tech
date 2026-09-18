@@ -23,7 +23,7 @@ Chaque variante est livrée en **`.svg`** (prioritaire web) · **`.png`** · **`
 | `monochrome-noir/` | `BR-Tech_Logo_Mono-Noir.*` | Impression N&B, gravure |
 | `monochrome-blanc/` | `BR-Tech_Logo_Mono-Blanc.*` | Fonds sombre / Navy / Primary |
 | `niveaux-de-gris/` | `BR-Tech_Logo_Grayscale.*` | Docs grises, fax |
-| `couleur-inversee/` | `BR-Tech_Logo_Inverse.*` | Gradient + « TECH SÀRL » blanc — fond noir |
+| `couleur-inversee/` | `BR-Tech_Logo_Inverse.*` | Gradient + « TECH SÀRL » blanc — SVG transparent (footer Navy) |
 
 > `monochrome-blanc/` contient aussi `*-alt.*` (variante Affinity `MONOCHROME BLANC2`).
 

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CtaBand } from "@/components/layout/CtaBand";
-import { ServiceIllustration } from "@/components/illustrations/ServiceIllustration";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
   breadcrumbNode,
@@ -57,9 +56,6 @@ export function ServiceArticle({
               </ButtonLink>
             ) : null}
           </div>
-          {content.illustration ? (
-            <ServiceIllustration name={content.illustration} />
-          ) : null}
 
           {content.sections.map((section) => (
             <section key={section.title} className="mt-12 border-t border-line pt-10">

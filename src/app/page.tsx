@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BrandIcon } from "@/components/icons/BrandIcon";
-import { AirflowBuilding } from "@/components/illustrations/AirflowBuilding";
-import { SchemaFigure } from "@/components/illustrations/SchemaFigure";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -148,8 +146,14 @@ export default function HomePage() {
         <ol className="mt-10 max-w-[40rem] list-none space-y-8 border-l border-line pl-6">
           {home.method.steps.map((step) => (
             <li key={step.title}>
-              <h3 className="text-[18px] font-semibold text-navy">{step.title}</h3>
-              <p className="mt-1 text-[15px] text-ink-secondary">{step.text}</p>
+              <h3 className="flex items-start gap-3 text-[18px] font-semibold text-navy">
+                <BrandIcon
+                  name={step.icon}
+                  className="mt-0.5 size-[18px] text-primary"
+                />
+                {step.title}
+              </h3>
+              <p className="mt-1 pl-8 text-[15px] text-ink-secondary">{step.text}</p>
             </li>
           ))}
         </ol>
@@ -159,13 +163,8 @@ export default function HomePage() {
       <Section id="realisations" tight>
         <h2 className="text-[24px] font-semibold text-navy md:text-[32px]">Réalisations</h2>
         <p className="mt-3 max-w-[44ch] text-ink-secondary">
-          Les photographies de chantiers seront publiées après le shooting. En attendant, le schéma du lot air.
+          Les photographies de chantiers seront publiées après le shooting.
         </p>
-        <div className="mt-8 max-w-[44rem]">
-          <SchemaFigure caption="Schéma — coupe de bâtiment et flux d’air. Photos réelles à venir.">
-            <AirflowBuilding />
-          </SchemaFigure>
-        </div>
       </Section>
 
       <Section>

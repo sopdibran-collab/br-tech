@@ -10,7 +10,6 @@ export const maintenancePage: ServicePageContent = {
   serviceName: "Maintenance et entretien de VMC",
   contactType: "maintenance",
   includeLausanne: true,
-  illustration: "maintenance",
   sections: [
     {
       title: "Pourquoi un contrat",
