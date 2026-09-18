@@ -1,6 +1,6 @@
 # STATUS — BR Tech Website
 
-**Dernière mise à jour :** 2026-07-28  
+**Dernière mise à jour :** 2026-08-15  
 **Environnement de travail cible :** Local (Cursor Desktop)  
 **Dossier projet local :** `/Users/dibransopj/Documents/Github/br-tech-website`
 
@@ -11,28 +11,51 @@
 - [x] Brand Book v1.0 (40 sections)
 - [x] Phase 1 UX Strategy (validée)
 - [x] Phase 2 Design System documenté
-- [x] Maquettes Phase 2 (Desktop, Laptop, Tablet, Mobile, planche DS)
-- [x] Destination locale `br-tech-website/` créée + Git initialisé
+- [x] Maquettes Phase 2 / 2.1
+- [x] Kit logo + favicon
+- [x] Instructions agent + project-context + Engine profil
+- [x] **Phase 3.0** Next.js 16 : accueil 2.1, contact, légal, IndexNow, sitemap (`npm run build` OK)
+- [x] **Phase 3.1** hub `/services/` + installation + double-flux + dépannage + `/maintenance/` (pas de `/zones/*`)
+- [x] Icônes SVG line (métier) — **pas** d’illustrations cartoon / Alegria (Brand Book §18)
 
 ## En attente
 
-- [ ] Validation Phase 2 par le client
-- [ ] Téléphone / e-mail / horaires réels
-- [ ] Décision section Chiffres (data réelles / alternative / suppression)
-- [ ] Confirmation copy checklist hero (« Devis gratuit », « Intervention rapide »)
-- [ ] Photos chantier réelles
-- [ ] Remote Git (GitHub/GitLab) pour sync local
+- [x] Run Engine → `docs/seo/BRIEF-ENGINE.md` (2026-08-15, a priori, pas de GSC)
+- [x] Plan 3.1 → `docs/seo/PHASE-3.1-CONTENT-PLAN.md`
+- [ ] Preview Vercel (projet pas encore créé — pas de domaine custom)
+- [ ] Photos chantier réelles (hero = schéma annoté)
+- [ ] Envoi e-mail formulaire (aujourd’hui : mailto vers `info@brtech.ch` après validation)
+- [ ] Phase **3.2** zones Renens / Lausanne (après confirmation territoire)
+- [ ] Handoff DNS Infomaniak (après Domains Vercel)
 
 ## Prochaine action
 
-1. Ouvrir `br-tech-website` en local dans Cursor Desktop  
-2. Valider Phase 2 (`docs/ui/PHASE-2-UI-DESIGN-SYSTEM.md` + `assets/visuels/phase2/`)  
-3. Lancer Phase 3 (scaffold Next.js dans `src/` / racine projet)
+1. `npm run dev` — relire 3.1 (nav Services, 3 pages + maintenance, contact title)
+2. Projet Vercel **preview only** — pas de `/zones/*`
+
+## Où travailler
+
+- **Site (ce repo)** : brand, UI, code, copy publié  
+- **Engine** : `/Users/dibransopj/Documents/WEBDEV/swiss-construction-intelligence` — analyse only  
+- **Vault** : `04 Clients/BR Tech Sàrl/` · `03 Projects/BR Tech Sàrl/`
+
+## Contact entreprise (verrouillé)
+
+| | |
+|---|---|
+| **Raison sociale** | BR Tech Sàrl |
+| **E-mail** | info@brtech.ch |
+| **Téléphone** | +41 79 176 38 19 |
+| **Horaires** | Du lundi au vendredi, de 7h00 à 17h00 |
+| **Adresse** | Rue de Lausanne 49g, 1020 Renens VD |
+| **Domaine** | brtech.ch |
 
 ## Décisions produit verrouillées
 
+- Direction UI 3.0 : **Phase 2.1**
 - Signature : **L'air, maîtrisé.**
 - CTA primaire : **Demander un devis**
 - CTA secondaire hero : **Planifier une visite technique**
-- Pas de lien « Appeler » dans le hero (téléphone = header / sticky mobile)
-- Nav : Services · Secteurs · Réalisations · Maintenance · À propos · Contact
+- Pas de lien « Appeler » dans le hero
+- Typo : Outfit + IBM Plex Sans + IBM Plex Mono (`next/font`)
+- Hébergement : **Vercel** · DNS/mails : **Infomaniak**

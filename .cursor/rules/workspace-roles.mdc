@@ -1,0 +1,36 @@
+---
+description: Où travailler — site ici, Engine SEO ailleurs, vault métier
+alwaysApply: true
+---
+
+# Rôles des workspaces (BR Tech)
+
+## Ce repo = le site
+
+Tout ce qui concerne **brtech.ch** (brand, UX/UI, copy, code, meta, schema, assets) se fait **ici** : `/Users/dibransopj/Documents/Github/br-tech-website` (GitHub `sopdibran-collab/br-tech`).
+
+Lire d’abord `AGENTS.md`.
+
+## swiss-construction-intelligence = outil, pas le site
+
+Chemin : `/Users/dibransopj/Documents/WEBDEV/swiss-construction-intelligence`
+
+C’est l’**étape indispensable** de préparation SEO / GEO / AEO (marché CH construction).  
+Il analyse et produit un **brief**. Il ne publie pas le site.
+
+- Ne **jamais** coder des pages BR Tech dans l’Engine
+- Ne **jamais** hardcoder le métier « ventilation » dans le core du moteur
+- Après analyse : ramener la synthèse dans `docs/seo/` de **ce** repo + vault `03 Projects/BR Tech Sàrl/`
+- Appliquer le brief **uniquement** ici (PR site)
+
+Procédure : `docs/ops/ENGINE-SEO-GEO-AEO.md`
+
+## Vault Obsidian = vérité métier
+
+`/Users/dibransopj/Documents/WEBDEV/AI Agency OS`  
+Fiche : `04 Clients/BR Tech Sàrl/00 - BR Tech Sàrl.md`  
+Conflit fiche ↔ repo → **Obsidian gagne** ; signaler et proposer sync.
+
+## swiss-construction-intelligence n’est pas un workspace de livraison site
+
+C’est un outil **transverse** (tous les projets construction CH), comme une étape de stratégie — pas un dossier « BR Tech ».
