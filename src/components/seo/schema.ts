@@ -14,9 +14,11 @@ export function postalAddress() {
 
 export function areaServedOrg() {
   return [
-    { "@type": "AdministrativeArea", name: "Suisse romande" },
-    { "@type": "AdministrativeArea", name: "Canton de Vaud" },
-    { "@type": "City", name: "Renens" },
+    ...site.serviceZone.cantons.map((name) => ({
+      "@type": "AdministrativeArea" as const,
+      name: `Canton de ${name}`,
+    })),
+    { "@type": "City" as const, name: "Renens" },
   ];
 }
 

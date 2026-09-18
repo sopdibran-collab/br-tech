@@ -1,16 +1,16 @@
+import { site } from "@/config/site";
 import type { ServicePageContent } from "@/content/types";
 
 export const servicesHub = {
   title: "Services de ventilation",
-  description:
-    "Installation, VMC double flux et dépannage de ventilation à Renens et en Suisse romande. Maintenance sur une page séparée.",
+  description: `Installation, VMC double flux et dépannage de ventilation à Renens et dans les ${site.serviceZone.display}. Maintenance sur une page séparée.`,
   h1: "Installation, double flux et dépannage",
-  lead: "BR Tech Sàrl conçoit, pose et dépanne les réseaux de ventilation en Suisse romande, depuis Renens. Trois portes d’entrée : installation neuve, VMC double flux, dépannage. La maintenance préventive a sa propre page. Pas de chauffage ni de plomberie.",
+  lead: `BR Tech Sàrl conçoit, pose et dépanne les réseaux de ventilation depuis Renens, dans les ${site.serviceZone.display}. Trois portes d’entrée : installation neuve, VMC double flux, dépannage. La maintenance préventive a sa propre page. Offre limitée à la ventilation — pas de chauffage, ni de climatisation, ni de plomberie.`,
   live: [
     {
       title: "Installation",
       href: "/services/installation",
-      text: "Réseaux neufs, calage sur le cahier des charges, pose, mise en service mesurée — Vaud, depuis Renens.",
+      text: "Réseaux neufs, calage sur le cahier des charges, pose de gaines et bouches, mise en service mesurée — depuis Renens.",
       icon: "flow",
     },
     {
@@ -28,9 +28,9 @@ export const servicesHub = {
   ],
   later: [
     {
-      title: "Rénovation aéraulique",
+      title: "Remplacement / rénovation",
       href: "/contact?type=renovation",
-      text: "Remplacement ou reprise d’une installation existante — décrivez le bâtiment.",
+      text: "Reprise ou remplacement d’une installation existante — décrivez le bâtiment.",
       icon: "building",
     },
     {
@@ -40,33 +40,44 @@ export const servicesHub = {
       icon: "flow",
     },
     {
-      title: "Optimisation énergétique",
-      href: "/contact?type=optimisation",
-      text: "Réglages, débits et récupération de chaleur sur une installation en place.",
-      icon: "energy",
+      title: "Étude / devis / planification",
+      href: "/contact?type=etude",
+      text: "Analyse du besoin, élaboration de plans et devis — avant la pose.",
+      icon: "clipboard",
+    },
+    {
+      title: "Nettoyage de conduits",
+      href: "/contact?type=nettoyage",
+      text: "Hygiène des réseaux aérauliques, discutée au devis ou dans le contrat d’entretien.",
+      icon: "filter",
+    },
+    {
+      title: "Réparation conduits / bouches",
+      href: "/contact?type=reparation",
+      text: "Remise en état ciblée des gaines et des bouches après diagnostic.",
+      icon: "wrench",
     },
   ],
   maintenance: {
     title: "Maintenance",
     href: "/maintenance",
-    text: "Entretien préventif, filtres, débits — offre distincte de l’installation.",
+    text: "Entretien préventif et contrat : filtres, débits — offre distincte de l’installation.",
     icon: "filter",
   },
 } as const;
 
 export const installationPage: ServicePageContent = {
   path: "/services/installation",
-  title: "Installateur ventilation Vaud",
-  description:
-    "BR Tech Sàrl installe la ventilation à Renens et en Vaud : relevé, pose, mise en service mesurée. Devis après visite technique.",
-  h1: "Installation de ventilation à Renens et en Vaud",
-  lead: "BR Tech Sàrl installe des systèmes de ventilation à Renens et dans le canton de Vaud : relevé, calage sur le cahier des charges, pose, mise en service mesurée. Résidentiel, immeubles, tertiaire. Le devis suit la visite technique. Offre limitée à l’air — pas le CVC généraliste.",
+  title: "Installateur ventilation Suisse romande",
+  description: `BR Tech Sàrl installe la ventilation à Renens et dans les ${site.serviceZone.display} : relevé, pose, mise en service mesurée. Devis après visite technique.`,
+  h1: "Installation de ventilation à Renens et en Suisse romande",
+  lead: `BR Tech Sàrl installe des systèmes de ventilation depuis Renens, dans les ${site.serviceZone.display} : relevé, calage sur le cahier des charges, pose de gaines et bouches, mise en service mesurée. Particuliers, immeubles, tertiaire et industrie. Le devis suit la visite technique. Offre limitée à l’air — pas le CVC généraliste.`,
   serviceName: "Installation de ventilation",
   contactType: "installation",
   includeLausanne: true,
   audience: {
     professionals:
-      "Lot air calé sur le cahier des charges, interlocuteur unique, mise en service mesurée — pour promoteurs, architectes et régies.",
+      "Lot air calé sur le cahier des charges, interlocuteur unique, mise en service mesurée — pour architectes, régies, entreprises générales, promoteurs et industrie.",
     individuals:
       "Une installation claire, des débits réglés, un chantier rangé. Nous expliquons le périmètre avant de poser.",
   },
@@ -80,20 +91,20 @@ export const installationPage: ServicePageContent = {
     {
       title: "Comment ça se passe",
       answer:
-        "Visite technique, analyse du besoin, offre écrite, pose, mise en service mesurée, puis discussion séparée de la maintenance.",
-      body: "Après le relevé, l’offre décrit le périmètre, les hypothèses et le planning prévisionnel — sans délai d’intervention annoncé comme un slogan. Sur le chantier : pose du réseau, raccordements, contrôle des accès maintenance. À la réception : documentation et mesures de débit. La maintenance n’est pas noyée dans l’installation : elle se discute à part, sur la page dédiée.",
+        "Contact, visite technique, offre écrite, pose, mise en service mesurée, puis discussion séparée de l’entretien.",
+      body: "Après le relevé, l’offre décrit le périmètre, les hypothèses et le planning prévisionnel — sans délai d’intervention annoncé comme un slogan. Sur le chantier : pose du réseau, raccordements, contrôle des accès maintenance. À la réception : mesures de débit, schéma et PV de mise en service. L’entretien n’est pas noyé dans l’installation : il se discute à part, sur la page dédiée.",
     },
     {
       title: "Cadre normatif (référence métier)",
       answer:
         "Les installations de ventilation mécanique s’inscrivent notamment dans le cadre SIA 382/1 (bases et exigences ; édition 2025, qui remplace celle de 2014), SIA 382/5:2021 pour les bâtiments d’habitation (qui remplace la SIA 2023), et SIA 180 pour la protection thermique, l’humidité et le climat intérieur.",
-      body: "Nous traitons ces normes comme cadre de projet et de cahier des charges, pas comme une certification affichée hors contexte. Les exigences énergétiques cantonales (LVLEne / MoPEC) s’appliquent au bâtiment selon le dossier — nous citons le texte du projet, sans revendiquer une conformité générique.",
+      body: "Nous traitons ces normes comme cadre de projet et de cahier des charges, pas comme une certification affichée hors contexte. Nous intervenons aussi dans le cadre de projets SIA et de bâtiments Minergie lorsque le dossier le prévoit — sans revendiquer une certification Minergie de l’entreprise. Les exigences énergétiques cantonales s’appliquent au bâtiment selon le dossier — nous citons le texte du projet, sans conformité générique.",
     },
     {
       title: "Livrables",
       answer:
-        "Documentation de pose, mesures de débit à la mise en service, chantier rangé, proposition de plan d’entretien.",
-      body: "Vous disposez d’une trace écrite des réglages et du périmètre réalisé. Les photographies de chantier seront publiées après le shooting dédié. En attendant, le process et l’adresse de Renens (Rue de Lausanne 49g, 1020) portent la preuve locale. Limite claire : nous ne livrons pas un lot chauffage ni un audit énergétique hors ventilation.",
+        "Mesures de débit, schéma, PV de mise en service, chantier rangé, proposition de plan d’entretien.",
+      body: `Vous disposez d’une trace écrite des réglages et du périmètre réalisé. Les photographies de chantier seront publiées après le shooting dédié. En attendant, le process et l’adresse de Renens (${formatAddressInline()}) portent la preuve locale. Limite claire : nous ne livrons pas un lot chauffage ni un audit énergétique hors ventilation.`,
     },
   ],
   faq: [
@@ -103,15 +114,15 @@ export const installationPage: ServicePageContent = {
     },
     {
       q: "BR Tech fait-elle aussi chauffage ou plomberie ?",
-      a: "Non : l’offre est la ventilation et la maintenance associée, pas le CVC généraliste.",
+      a: "Non : l’offre est la ventilation et l’entretien associé — pas de chauffage, ni de climatisation, ni de plomberie.",
     },
     {
-      q: "Faut-il une page par commune vaudoise ?",
-      a: "Non : une page zone seulement si le territoire d’intervention est réel ; le canton de Vaud se porte sur l’accueil et les services.",
+      q: "Où intervenez-vous pour une installation ?",
+      a: `Depuis Renens, dans les ${site.serviceZone.display}. Une page par commune n’est publiée que si le territoire d’intervention le justifie.`,
     },
     {
       q: "Une régie ou un immeuble peut-il demander un devis ventilation ?",
-      a: "Oui. Le devis suit la compréhension du besoin, et une visite technique si elle est nécessaire.",
+      a: "Oui. Le devis suit la compréhension du besoin, et une visite technique si elle est nécessaire. Étude et élaboration de plans sur demande.",
     },
   ],
   related: [
@@ -122,19 +133,22 @@ export const installationPage: ServicePageContent = {
   ],
 };
 
+function formatAddressInline() {
+  return `${site.address.street}, ${site.address.postalCode}`;
+}
+
 export const doubleFluxPage: ServicePageContent = {
   path: "/services/double-flux",
-  title: "VMC double flux Vaud",
-  description:
-    "Installation de VMC double flux en Vaud et à Lausanne, depuis Renens. Récupération de chaleur, sans pourcentage inventé.",
-  h1: "VMC double flux en Vaud et à Lausanne",
-  lead: "Une VMC double flux insuffle et extrait l’air, en général avec récupération de chaleur. BR Tech Sàrl l’installe en Suisse romande depuis Renens, pour le logement, l’immeuble et le tertiaire. Le gain énergétique dépend du bâtiment et de la pose — pas d’un pourcentage annoncé.",
+  title: "VMC double flux Suisse romande",
+  description: `Installation de VMC double flux dans les ${site.serviceZone.display}, depuis Renens. Récupération de chaleur, sans pourcentage inventé.`,
+  h1: "VMC double flux en Suisse romande",
+  lead: `Une VMC double flux insuffle et extrait l’air, en général avec récupération de chaleur. BR Tech Sàrl l’installe depuis Renens, dans les ${site.serviceZone.display}, pour le logement, l’immeuble et le tertiaire. Le gain énergétique dépend du bâtiment et de la pose — pas d’un pourcentage annoncé.`,
   serviceName: "Installation de VMC double flux",
   contactType: "double-flux",
   includeLausanne: true,
   audience: {
     professionals:
-      "Récupération de chaleur et débits calés sur le projet architectural — interlocuteur unique sur le lot air.",
+      "Récupération de chaleur et débits calés sur le projet architectural — interlocuteur unique sur le lot air pour architectes, régies, EG et promoteurs.",
     individuals:
       "Air renouvelé, moins de pertes de chaleur liées au renouvellement d’air, confort au quotidien — sans pourcentage de gain annoncé.",
   },
@@ -149,19 +163,19 @@ export const doubleFluxPage: ServicePageContent = {
       title: "Efficacité énergétique",
       answer:
         "Un double flux avec récupération de chaleur réduit les pertes liées au renouvellement d’air par rapport à une extraction sans récupération ; le gain dépend de l’installation et du bâtiment, pas d’un pourcentage inventé.",
-      body: "En Vaud, les exigences énergétiques du bâtiment s’inscrivent dans le cadre cantonal (LVLEne / MoPEC) applicable au projet. Nous citons le texte du dossier, pas un slogan. Le dimensionnement et la mise en service mesurée conditionnent le résultat autant que le choix du caisson.",
+      body: "Les exigences énergétiques du bâtiment s’inscrivent dans le cadre cantonal applicable au projet. Nous citons le texte du dossier, pas un slogan. Le dimensionnement et la mise en service mesurée conditionnent le résultat autant que le choix du caisson. Sur les bâtiments Minergie, le lot ventilation suit le cahier des charges du projet — sans certification Minergie revendiquée pour l’entreprise.",
     },
     {
       title: "Pour quel bâtiment",
       answer:
         "Logement étanche, immeuble, petits tertiaires : le dimensionnement suit l’usage et les locaux.",
-      body: "Villa, copropriété ou bureaux : les débits, le caisson et les réseaux se calent sur les volumes, les chemins de gaines et l’accès entretien. Lausanne et le canton se traitent depuis l’ancrage de Renens. Hors périmètre : chauffage, clim et plomberie.",
+      body: `Villa, copropriété ou bureaux : les débits, le caisson et les réseaux se calent sur les volumes, les chemins de gaines et l’accès entretien. Zone d’intervention : ${site.serviceZone.display}, depuis l’ancrage de Renens. Hors périmètre : chauffage, climatisation et plomberie.`,
     },
     {
       title: "Pose, mise en service et livrables",
       answer:
-        "Réseaux, caisson, équilibrage des débits, documentation des réglages, proposition de plan d’entretien.",
-      body: "Processus : relevé ou lecture du projet, offre, pose, mise en service avec mesures, puis discussion séparée de la maintenance. Limite : nous ne promettons ni délai d’arrivée ni rendement chiffré hors mesures réelles du bâtiment.",
+        "Réseaux, caisson, équilibrage des débits, mesures de débit, schéma, PV de mise en service, proposition de plan d’entretien.",
+      body: "Processus : contact, visite ou lecture du projet, offre, pose, mise en service avec mesures, puis discussion séparée de l’entretien. Limite : nous ne promettons ni délai d’arrivée ni rendement chiffré hors mesures réelles du bâtiment.",
     },
     {
       title: "Cadre normatif (référence métier)",
@@ -207,13 +221,13 @@ export const depannagePage: ServicePageContent = {
   description:
     "Dépannage de ventilation à Renens : diagnostic et remise en service du réseau d’air, sans promesse de délai. BR Tech Sàrl.",
   h1: "Dépannage de ventilation à Renens",
-  lead: "BR Tech Sàrl intervient sur les pannes de ventilation depuis son siège à Renens (Rue de Lausanne 49g). Diagnostic, remise en service du réseau d’air, sans promesse de délai. Lausanne et le canton se confirment selon le projet.",
+  lead: `BR Tech Sàrl intervient sur les pannes de ventilation depuis son siège à Renens (${site.address.street}). Diagnostic, réparation de conduits et bouches, remise en service du réseau d’air, sans promesse de délai. Zone : ${site.serviceZone.display}.`,
   serviceName: "Dépannage de ventilation",
   contactType: "depannage",
   includeLausanne: true,
   audience: {
     professionals:
-      "Diagnostic du réseau d’air, remise en service documentée — pour régies, promoteurs et interlocuteurs de chantier.",
+      "Diagnostic du réseau d’air, remise en service documentée — pour régies, promoteurs, entreprises générales et interlocuteurs de chantier.",
     individuals:
       "Nous identifions la panne et remettons l’air en route après visite — sans délai d’arrivée annoncé.",
   },
@@ -227,14 +241,13 @@ export const depannagePage: ServicePageContent = {
     {
       title: "Ce que nous faisons",
       answer:
-        "Relevé sur place, identification de la cause, réparation ciblée ou préconisation de remplacement, puis remise en service du réseau d’air.",
-      body: "Selon l’état du caisson, des bouches et des gaines, l’intervention reste un dépannage ou bascule vers une rénovation aéraulique. L’offre le dit clairement. Livrables typiques : constat, actions réalisées, observations utiles pour la suite (entretien ou reprise). Limite : hors chauffage, clim et plomberie ; pas de garantie de délai de remise en route avant diagnostic.",
+        "Relevé sur place, identification de la cause, réparation ciblée des conduits ou bouches, ou préconisation de remplacement, puis remise en service du réseau d’air.",
+      body: "Selon l’état du caisson, des bouches et des gaines, l’intervention reste un dépannage ou bascule vers une rénovation aéraulique. L’offre le dit clairement. Livrables typiques : constat, actions réalisées, observations utiles pour la suite (entretien ou reprise). Limite : hors chauffage, climatisation et plomberie ; pas de garantie de délai de remise en route avant diagnostic.",
     },
     {
-      title: "Renens et alentours",
-      answer:
-        "BR Tech Sàrl a son siège à Renens (VD), Rue de Lausanne 49g, 1020, et travaille la ventilation en Suisse romande depuis cet ancrage.",
-      body: "La preuve locale est l’adresse, pas une galerie de communes. Une page par ville n’est publiée que si le territoire d’intervention est réel. Lausanne et le reste du canton se confirment selon le type de projet.",
+      title: "Renens et zone d’intervention",
+      answer: `BR Tech Sàrl a son siège à Renens (VD), ${site.address.street}, ${site.address.postalCode}, et intervient dans les ${site.serviceZone.display}.`,
+      body: "La preuve locale est l’adresse, pas une galerie de communes. Une page par ville n’est publiée que si le territoire d’intervention est réel.",
     },
     {
       title: "Cadre normatif (référence métier)",
@@ -256,7 +269,7 @@ export const depannagePage: ServicePageContent = {
     },
     {
       q: "Qui intervient à Renens ?",
-      a: "BR Tech Sàrl a son siège à Renens (VD), Rue de Lausanne 49g, 1020, et travaille la ventilation en Suisse romande depuis cet ancrage.",
+      a: `BR Tech Sàrl a son siège à Renens (VD), ${site.address.street}, ${site.address.postalCode}, et intervient dans les ${site.serviceZone.display}.`,
     },
     {
       q: "L’humidité dans un appartement vient-elle d’un défaut de ventilation ?",

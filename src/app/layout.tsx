@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s — BR Tech Sàrl",
   },
   description:
-    "BR Tech Sàrl installe et entretient la ventilation à Renens et en Suisse romande — VMC, réseaux, maintenance. Devis après visite technique.",
+    "BR Tech Sàrl installe et entretient la ventilation à Renens — Vaud, Fribourg, Genève, Neuchâtel et Valais. VMC, réseaux, entretien. Devis après visite technique.",
   icons: { icon: "/favicon.svg" },
   openGraph: {
     locale: "fr_CH",

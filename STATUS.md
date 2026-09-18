@@ -47,7 +47,7 @@
 | **E-mail** | info@brtech.ch |
 | **Téléphone** | +41 79 176 38 19 |
 | **Horaires** | Du lundi au vendredi, de 7h00 à 17h00 |
-| **Adresse** | Rue de Lausanne 49g, 1020 Renens VD |
+| **Adresse** | Rue de Lausanne 49g, 1020 Renens (VD) |
 | **Domaine** | brtech.ch |
 
 ## Décisions produit verrouillées

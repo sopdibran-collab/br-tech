@@ -1,28 +1,37 @@
+import { site } from "@/config/site";
+
 export const home = {
   hero: {
     h1: "L’air, maîtrisé.",
     sub: "Spécialistes ventilation · Suisse romande",
   },
-  audiences: ["Architectes", "Régies", "PME", "Industries", "Collectivités"],
+  audiences: [
+    "Particuliers",
+    "Architectes",
+    "Régies",
+    "Entreprises générales",
+    "Promoteurs",
+    "Industrie",
+  ],
   checklistTitle: "Ce que nous engageons",
   checklist: [
     "Devis clair et détaillé",
     "Intervention planifiée",
-    "Respect des normes SIA applicables",
+    "Cadre SIA applicable au projet",
     "Solutions calées sur le bâtiment",
-    "Maintenance préventive",
+    "Entretien préventif",
   ],
   why: {
     title: "L’expertise ventilation",
-    lead: "Pas un catalogue CVC. Un lot air, documenté, calé sur le bâtiment et le planning.",
+    lead: "Un lot air uniquement — pas de chauffage, ni de climatisation, ni de plomberie. Documenté, calé sur le bâtiment et le planning.",
     items: [
       {
         title: "Installation documentée",
         text: "Pose, mise en service et traces écrites pour la réception.",
       },
       {
-        title: "Cadre SIA du projet",
-        text: "Interventions inscrites dans les normes suisses applicables au cahier des charges.",
+        title: "Cadre de projet",
+        text: "Interventions inscrites dans les projets SIA et, le cas échéant, les bâtiments Minergie — cadre métier, pas une certification affichée hors contexte.",
       },
       {
         title: "Chantier planifié",
@@ -36,7 +45,7 @@ export const home = {
   },
   expertise: {
     title: "Installer, ventiler, entretenir",
-    lead: "Conception et pose de réseaux aérauliques, double flux ou extraction, puis suivi dans le temps.",
+    lead: "Installation neuve ou remplacement, VMC double flux ou simple flux, pose de gaines et bouches, puis entretien dans le temps.",
     items: [
       {
         title: "Installation",
@@ -52,7 +61,7 @@ export const home = {
       },
       {
         title: "Maintenance",
-        text: "Entretien préventif : débits, hygiène, pannes évitées plutôt que subies.",
+        text: "Entretien préventif et contrat : débits, hygiène, pannes évitées plutôt que subies.",
         href: "/maintenance",
         icon: "filter",
       },
@@ -61,27 +70,27 @@ export const home = {
     allLabel: "Tous les services",
   },
   method: {
-    title: "De la visite à l’entretien",
+    title: "Du contact à l’entretien",
     lead: "Une affaire se tient dans cet ordre.",
     steps: [
       {
-        title: "Visite technique",
+        title: "Contact",
+        text: "Vous décrivez le bâtiment et le besoin.",
+        icon: "clipboard",
+      },
+      {
+        title: "Visite",
         text: "Relevé sur site, contraintes et besoins.",
         icon: "pin",
       },
       {
-        title: "Analyse",
-        text: "Dimensionnement et options expliquées.",
+        title: "Offre",
+        text: "Devis lisible, périmètre et délais.",
         icon: "building",
       },
       {
-        title: "Offre",
-        text: "Devis lisible, périmètre et délais.",
-        icon: "clipboard",
-      },
-      {
-        title: "Installation",
-        text: "Pose soignée, chantier net.",
+        title: "Pose",
+        text: "Installation soignée, chantier net.",
         icon: "flow",
       },
       {
@@ -90,36 +99,36 @@ export const home = {
         icon: "energy",
       },
       {
-        title: "Maintenance",
+        title: "Entretien",
         text: "Suivi préventif après réception.",
         icon: "filter",
       },
     ],
     reception:
-      "À la réception : documentation, mesures de débit, chantier rangé, plan d’entretien.",
+      "À la réception : mesures de débit, schéma, PV de mise en service, chantier rangé, plan d’entretien.",
   },
   faq: {
     title: "Questions fréquentes",
     items: [
       {
         q: "Vous êtes ventiliste ou CVC généraliste ?",
-        a: "Ventiliste. Installation, rénovation et maintenance de réseaux d’air, à Renens et en Suisse romande — pas le chauffage ni la plomberie.",
+        a: "Ventiliste. Installation, rénovation et entretien de réseaux d’air — pas le chauffage, ni la climatisation, ni la plomberie.",
       },
       {
         q: "Où intervenez-vous ?",
-        a: "BR Tech Sàrl a son siège à Renens (VD), Rue de Lausanne 49g, 1020, et travaille la ventilation en Suisse romande depuis cet ancrage. La zone se confirme selon le type de projet.",
+        a: `BR Tech Sàrl a son siège à Renens (VD), ${site.address.street}, ${site.address.postalCode}, et intervient dans les ${site.serviceZone.display}.`,
       },
       {
         q: "Quelle est la différence entre simple flux et double flux ?",
         a: "Le simple flux extrait l’air vicié et laisse entrer l’air neuf par des entrées ; le double flux insuffle et extrait, en général avec récupération de chaleur sur l’air extrait.",
       },
       {
-        q: "Proposez-vous la maintenance après installation ?",
-        a: "La maintenance préventive est proposée après installation : débits, hygiène, passages documentés.",
+        q: "Proposez-vous l’entretien après installation ?",
+        a: "Oui. L’entretien préventif et le contrat se discutent après installation : débits, hygiène, passages documentés.",
       },
       {
-        q: "Travaillez-vous avec les architectes et entreprises générales ?",
-        a: "Nous collaborons avec architectes, régies, entreprises générales et maîtres d’ouvrage — coordination de chantier et dossier pour la réception.",
+        q: "Pour qui travaillez-vous ?",
+        a: "Particuliers, architectes, régies, entreprises générales (EG), promoteurs et industrie. Nous répondons également aux appels d’offres pour le lot ventilation.",
       },
       {
         q: "Comment obtenir un devis ?",
