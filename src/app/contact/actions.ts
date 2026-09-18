@@ -1,5 +1,6 @@
 "use server";
 
+import { Resend } from "resend";
 import { z } from "zod";
 import { projectTypes, site } from "@/config/site";
 
@@ -20,10 +21,11 @@ const schema = z.object({
 export type ContactState = {
   ok: boolean;
   errors?: Record<string, string>;
-  mailto?: string;
 };
 
 const hits = new Map<string, { n: number; t: number }>();
+
+const DEFAULT_FROM = "BR Tech <onboarding@resend.dev>";
 
 function rateLimited(key: string) {
   const now = Date.now();
@@ -35,6 +37,14 @@ function rateLimited(key: string) {
   if (row.n >= 5) return true;
   row.n += 1;
   return false;
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
 }
 
 export async function submitContact(
@@ -74,11 +84,28 @@ export async function submitContact(
     };
   }
 
+  const apiKey = process.env.RESEND_API_KEY?.trim();
+  if (!apiKey) {
+    if (process.env.NODE_ENV !== "production") {
+      console.error(
+        "[contact] RESEND_API_KEY manquante. Définissez-la dans .env.local (voir .env.example).",
+      );
+    }
+    return {
+      ok: false,
+      errors: {
+        form: "L’envoi e-mail n’est pas configuré pour le moment. Écrivez-nous à info@brtech.ch ou appelez-nous.",
+      },
+    };
+  }
+
   const typeLabel =
     projectTypes.find((item) => item.value === parsed.data.projectType)?.label ??
     parsed.data.projectType;
 
-  const body = [
+  const subject = `Demande — ${typeLabel} — ${parsed.data.name}`;
+
+  const lines = [
     `Nom : ${parsed.data.name}`,
     parsed.data.company ? `Société : ${parsed.data.company}` : null,
     `Téléphone : ${parsed.data.phone}`,
@@ -87,13 +114,66 @@ export async function submitContact(
     parsed.data.location ? `Localisation : ${parsed.data.location}` : null,
     "",
     parsed.data.message,
-  ]
-    .filter(Boolean)
-    .join("\n");
+  ].filter((line): line is string => line !== null);
 
-  const mailto = `mailto:${site.email}?subject=${encodeURIComponent(
-    `Demande — ${typeLabel} — ${parsed.data.name}`,
-  )}&body=${encodeURIComponent(body)}`;
+  const text = lines.join("\n");
 
-  return { ok: true, mailto };
+  const htmlRows = [
+    ["Nom", parsed.data.name],
+    parsed.data.company ? ["Société", parsed.data.company] : null,
+    ["Téléphone", parsed.data.phone],
+    ["E-mail", parsed.data.email],
+    ["Type de projet", typeLabel],
+    parsed.data.location ? ["Localisation", parsed.data.location] : null,
+  ].filter((row): row is [string, string] => row !== null);
+
+  const html = `
+    <div style="font-family: system-ui, sans-serif; font-size: 15px; line-height: 1.5; color: #1a1a1a;">
+      <p><strong>Nouvelle demande — brtech.ch</strong></p>
+      <table style="border-collapse: collapse;">
+        ${htmlRows
+          .map(
+            ([label, value]) =>
+              `<tr><td style="padding: 4px 16px 4px 0; color: #555;">${escapeHtml(label)}</td><td style="padding: 4px 0;">${escapeHtml(value)}</td></tr>`,
+          )
+          .join("")}
+      </table>
+      <p style="margin-top: 16px; white-space: pre-wrap;">${escapeHtml(parsed.data.message)}</p>
+    </div>
+  `.trim();
+
+  const to = process.env.CONTACT_TO_EMAIL?.trim() || site.email;
+  const from = process.env.CONTACT_FROM_EMAIL?.trim() || DEFAULT_FROM;
+
+  try {
+    const resend = new Resend(apiKey);
+    const { error } = await resend.emails.send({
+      from,
+      to: [to],
+      replyTo: parsed.data.email,
+      subject,
+      text,
+      html,
+    });
+
+    if (error) {
+      console.error("[contact] Resend error:", error);
+      return {
+        ok: false,
+        errors: {
+          form: "L’envoi a échoué. Réessayez dans un instant, ou écrivez-nous à info@brtech.ch.",
+        },
+      };
+    }
+  } catch (err) {
+    console.error("[contact] Resend exception:", err);
+    return {
+      ok: false,
+      errors: {
+        form: "L’envoi a échoué. Réessayez dans un instant, ou écrivez-nous à info@brtech.ch.",
+      },
+    };
+  }
+
+  return { ok: true };
 }
