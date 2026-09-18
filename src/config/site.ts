@@ -32,11 +32,24 @@ export const site = {
     country: "CH",
     countryName: "Suisse",
   },
-  mapsQuery: "Rue de Lausanne 49g, 1020 Renens VD",
+  mapsQuery: "Rue de Lausanne 49g, 1020 Renens (VD)",
+  /** Zone d’intervention validée — cinq cantons, à lister telle quelle. */
+  serviceZone: {
+    cantons: [
+      "Vaud",
+      "Fribourg",
+      "Genève",
+      "Neuchâtel",
+      "Valais",
+    ] as const,
+    /** Phrase courte pour le copy. */
+    display:
+      "cantons de Vaud, Fribourg, Genève, Neuchâtel et Valais",
+  },
 } as const;
 
 export function formatAddress() {
-  return `${site.address.street}, ${site.address.postalCode} ${site.address.city} ${site.address.region}`;
+  return `${site.address.street}, ${site.address.postalCode} ${site.address.city} (${site.address.region})`;
 }
 
 export const cta = {
@@ -78,6 +91,7 @@ export const footerGroups = {
     { label: "Maintenance", href: "/maintenance" },
     { label: "Rénovation", href: "/contact?type=renovation" },
     { label: "Extraction", href: "/contact?type=extraction" },
+    { label: "Étude / plans", href: "/contact?type=etude" },
   ],
   legal: [
     { label: "Mentions légales", href: "/mentions-legales" },
@@ -85,14 +99,18 @@ export const footerGroups = {
   ],
 } as const;
 
+/** Types de projet du formulaire — prestations validées uniquement. */
 export const projectTypes = [
-  { value: "installation", label: "Installation" },
-  { value: "renovation", label: "Rénovation" },
-  { value: "maintenance", label: "Maintenance" },
-  { value: "depannage", label: "Dépannage" },
-  { value: "visite", label: "Visite technique" },
+  { value: "installation", label: "Installation neuve" },
+  { value: "renovation", label: "Remplacement / rénovation" },
   { value: "double-flux", label: "VMC double flux" },
   { value: "extraction", label: "Simple flux / extraction" },
-  { value: "optimisation", label: "Optimisation énergétique" },
+  { value: "depannage", label: "Dépannage" },
+  { value: "maintenance", label: "Entretien / contrat" },
+  { value: "gaines", label: "Pose de gaines et bouches" },
+  { value: "nettoyage", label: "Nettoyage de conduits" },
+  { value: "reparation", label: "Réparation conduits / bouches" },
+  { value: "etude", label: "Étude / devis / planification" },
+  { value: "visite", label: "Visite technique" },
   { value: "autre", label: "Autre" },
 ] as const;

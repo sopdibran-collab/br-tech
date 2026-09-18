@@ -78,7 +78,7 @@ export default function ServicesHubPage() {
           <section className="mt-12 border-t border-line pt-10">
             <h2 className="text-[22px] font-semibold text-navy">Autres besoins</h2>
             <p className="mt-3 text-[17px] text-ink">
-              Rénovation, extraction et optimisation se discutent au devis — les pages dédiées viendront ensuite.
+              Remplacement, extraction, étude et plans, nettoyage ou réparation se discutent au devis — les pages dédiées viendront ensuite.
             </p>
             <ul className="mt-6 divide-y divide-line border-y border-line">
               {servicesHub.later.map((item) => (
