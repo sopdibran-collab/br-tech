@@ -14,6 +14,12 @@ export type RelatedLink = {
   href: string;
 };
 
+/** Bloc « Pour qui » — même prestation, deux angles (pro / particulier). */
+export type AudienceBlock = {
+  professionals: string;
+  individuals: string;
+};
+
 export type ServicePageContent = {
   path: string;
   title: string;
@@ -22,6 +28,8 @@ export type ServicePageContent = {
   lead: string;
   serviceName: string;
   contactType: string;
+  /** Angles promoteurs / architectes / régies vs particuliers. */
+  audience: AudienceBlock;
   sections: readonly ContentSection[];
   faq: readonly FaqItem[];
   related: readonly RelatedLink[];

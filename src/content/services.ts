@@ -10,7 +10,7 @@ export const servicesHub = {
     {
       title: "Installation",
       href: "/services/installation",
-      text: "Réseaux neufs, calage sur le cahier des charges, mise en service mesurée — Vaud, depuis Renens.",
+      text: "Réseaux neufs, calage sur le cahier des charges, pose, mise en service mesurée — Vaud, depuis Renens.",
       icon: "flow",
     },
     {
@@ -64,42 +64,42 @@ export const installationPage: ServicePageContent = {
   serviceName: "Installation de ventilation",
   contactType: "installation",
   includeLausanne: true,
+  audience: {
+    professionals:
+      "Lot air calé sur le cahier des charges, interlocuteur unique, mise en service mesurée — pour promoteurs, architectes et régies.",
+    individuals:
+      "Une installation claire, des débits réglés, un chantier rangé. Nous expliquons le périmètre avant de poser.",
+  },
   sections: [
-    {
-      title: "Pour qui",
-      answer:
-        "Architectes, régies, entreprises générales et maîtres d’ouvrage qui ont un lot air à poser sans le diluer dans le chauffage.",
-      body: "Nous intervenons sur le résidentiel, les immeubles et le tertiaire en Suisse romande, depuis le siège de Renens. Le périmètre se confirme selon le projet — pas une page par commune.",
-    },
     {
       title: "Ce que nous posons",
       answer:
-        "Réseaux neufs, caissons, bouches, simple ou double flux selon le projet.",
-      body: "Le système suit l’usage du bâtiment et le cahier des charges : débits, chemins de gaines, accès maintenance. La VMC double flux a sa page dédiée lorsque c’est l’intention principale.",
+        "Réseaux d’air neufs ou en rénovation : caissons, gaines, bouches d’extraction et d’insufflation, simple ou double flux selon le projet.",
+      body: "Le système suit l’usage du bâtiment et le cahier des charges : débits, chemins de gaines, accès pour l’entretien. Nous coordonnons les interfaces avec le second œuvre lorsque le planning le demande. La VMC double flux a sa page dédiée lorsque c’est l’intention principale. Hors périmètre : chauffage, climatisation et plomberie.",
     },
     {
       title: "Comment ça se passe",
       answer:
-        "Visite technique, analyse, offre, installation, mise en service, puis maintenance si elle est retenue.",
-      body: "L’offre décrit le périmètre et les délais. À la réception : documentation et mesures de débit. La maintenance n’est pas noyée dans l’installation : elle se discute à part.",
+        "Visite technique, analyse du besoin, offre écrite, pose, mise en service mesurée, puis discussion séparée de la maintenance.",
+      body: "Après le relevé, l’offre décrit le périmètre, les hypothèses et le planning prévisionnel — sans délai d’intervention annoncé comme un slogan. Sur le chantier : pose du réseau, raccordements, contrôle des accès maintenance. À la réception : documentation et mesures de débit. La maintenance n’est pas noyée dans l’installation : elle se discute à part, sur la page dédiée.",
     },
     {
-      title: "Normes",
+      title: "Cadre normatif (référence métier)",
       answer:
-        "Les installations de ventilation des bâtiments sont traitées notamment par la SIA 382/1 ; l’humidité et le climat intérieur relèvent aussi de la SIA 180.",
-      body: "Nous inscrivons le travail dans les exigences du cahier des charges et du cadre suisse applicable. Nous n’annonçons pas une « conformité garantie » hors contexte de projet.",
+        "Les installations de ventilation mécanique s’inscrivent notamment dans le cadre SIA 382/1 (bases et exigences ; édition 2025, qui remplace celle de 2014), SIA 382/5:2021 pour les bâtiments d’habitation (qui remplace la SIA 2023), et SIA 180 pour la protection thermique, l’humidité et le climat intérieur.",
+      body: "Nous traitons ces normes comme cadre de projet et de cahier des charges, pas comme une certification affichée hors contexte. Les exigences énergétiques cantonales (LVLEne / MoPEC) s’appliquent au bâtiment selon le dossier — nous citons le texte du projet, sans revendiquer une conformité générique.",
     },
     {
       title: "Livrables",
       answer:
-        "Documentation, mesures de débit, chantier rangé, plan d’entretien proposé.",
-      body: "Les photographies de chantier seront publiées après le shooting. En attendant, le process et l’adresse de Renens portent la preuve locale.",
+        "Documentation de pose, mesures de débit à la mise en service, chantier rangé, proposition de plan d’entretien.",
+      body: "Vous disposez d’une trace écrite des réglages et du périmètre réalisé. Les photographies de chantier seront publiées après le shooting dédié. En attendant, le process et l’adresse de Renens (Rue de Lausanne 49g, 1020) portent la preuve locale. Limite claire : nous ne livrons pas un lot chauffage ni un audit énergétique hors ventilation.",
     },
   ],
   faq: [
     {
       q: "Quelle norme suisse concerne la ventilation des logements ?",
-      a: "Les installations de ventilation des bâtiments sont traitées notamment par la SIA 382/1 (ventilation et climatisation des bâtiments) ; l’humidité et le climat intérieur relèvent aussi de la SIA 180.",
+      a: "Le cadre métier cite notamment la SIA 382/1 (ventilation mécanique — bases et exigences ; édition 2025) et, pour l’habitation, la SIA 382/5:2021. L’humidité et le climat intérieur relèvent aussi de la SIA 180. Ces références cadrent le projet ; elles ne constituent pas une certification de l’entreprise hors contexte.",
     },
     {
       q: "BR Tech fait-elle aussi chauffage ou plomberie ?",
@@ -132,30 +132,42 @@ export const doubleFluxPage: ServicePageContent = {
   serviceName: "Installation de VMC double flux",
   contactType: "double-flux",
   includeLausanne: true,
+  audience: {
+    professionals:
+      "Récupération de chaleur et débits calés sur le projet architectural — interlocuteur unique sur le lot air.",
+    individuals:
+      "Air renouvelé, moins de pertes de chaleur liées au renouvellement d’air, confort au quotidien — sans pourcentage de gain annoncé.",
+  },
   sections: [
     {
       title: "Simple flux ou double flux",
       answer:
         "Le simple flux extrait l’air vicié et laisse entrer l’air neuf par des entrées ; le double flux insuffle et extrait, en général avec récupération de chaleur sur l’air extrait.",
-      body: "Le choix dépend de l’étanchéité du bâtiment, du confort visé et du cahier des charges. Nous expliquons l’option retenue dans l’offre, sans jargon inutile.",
+      body: "Le choix dépend de l’étanchéité du bâtiment, du confort visé et du cahier des charges. Nous expliquons l’option retenue dans l’offre, sans jargon inutile. Lorsque le double flux n’est pas le bon lot, l’extraction seule se discute via le contact — ce n’est pas une page séparée à ce stade.",
     },
     {
       title: "Efficacité énergétique",
       answer:
         "Un double flux avec récupération de chaleur réduit les pertes liées au renouvellement d’air par rapport à une extraction sans récupération ; le gain dépend de l’installation et du bâtiment, pas d’un pourcentage inventé.",
-      body: "En Vaud, les exigences énergétiques du bâtiment s’inscrivent dans le cadre cantonal (LVLEne / MoPEC) applicable au projet. Nous citons le texte du dossier, pas un slogan.",
+      body: "En Vaud, les exigences énergétiques du bâtiment s’inscrivent dans le cadre cantonal (LVLEne / MoPEC) applicable au projet. Nous citons le texte du dossier, pas un slogan. Le dimensionnement et la mise en service mesurée conditionnent le résultat autant que le choix du caisson.",
     },
     {
       title: "Pour quel bâtiment",
       answer:
-        "Logement étanche, immeuble, bureaux : le dimensionnement suit l’usage.",
-      body: "Villa, copropriété ou tertiaire : les débits, le caisson et les réseaux se calent sur les locaux et l’accès entretien. Lausanne et le canton se traitent depuis l’ancrage de Renens.",
+        "Logement étanche, immeuble, petits tertiaires : le dimensionnement suit l’usage et les locaux.",
+      body: "Villa, copropriété ou bureaux : les débits, le caisson et les réseaux se calent sur les volumes, les chemins de gaines et l’accès entretien. Lausanne et le canton se traitent depuis l’ancrage de Renens. Hors périmètre : chauffage, clim et plomberie.",
     },
     {
-      title: "Pose et mise en service",
+      title: "Pose, mise en service et livrables",
       answer:
-        "Réseaux, caisson, équilibrage des débits, traces écrites.",
-      body: "La mise en service documente les réglages. Un plan d’entretien est proposé pour garder filtres et débits dans le temps.",
+        "Réseaux, caisson, équilibrage des débits, documentation des réglages, proposition de plan d’entretien.",
+      body: "Processus : relevé ou lecture du projet, offre, pose, mise en service avec mesures, puis discussion séparée de la maintenance. Limite : nous ne promettons ni délai d’arrivée ni rendement chiffré hors mesures réelles du bâtiment.",
+    },
+    {
+      title: "Cadre normatif (référence métier)",
+      answer:
+        "Pour l’habitation, la SIA 382/5:2021 traite de la ventilation mécanique dans les bâtiments d’habitation (elle remplace la SIA 2023). Les bases et exigences générales relèvent notamment de la SIA 382/1 (édition 2025). L’humidité et le climat intérieur s’inscrivent aussi dans la SIA 180.",
+      body: "Ces normes cadrent le projet et le cahier des charges. Nous ne les présentons pas comme une certification de l’entreprise hors contexte de chantier.",
     },
     {
       title: "Entretien",
@@ -172,6 +184,10 @@ export const doubleFluxPage: ServicePageContent = {
     {
       q: "La VMC double flux améliore-t-elle l’efficacité énergétique ?",
       a: "Un double flux avec récupération de chaleur réduit les pertes liées au renouvellement d’air par rapport à une extraction sans récupération ; le gain dépend de l’installation et du bâtiment, pas d’un pourcentage inventé.",
+    },
+    {
+      q: "Quelle norme suisse s’applique à la VMC en habitation ?",
+      a: "Le cadre métier cite notamment la SIA 382/5:2021 pour la ventilation mécanique dans les bâtiments d’habitation, et la SIA 382/1 pour les bases et exigences. La SIA 180 couvre aussi humidité et climat intérieur. Références de projet, pas certification affichée hors contexte.",
     },
     {
       q: "À quelle fréquence entretenir une VMC en Suisse ?",
@@ -195,29 +211,41 @@ export const depannagePage: ServicePageContent = {
   serviceName: "Dépannage de ventilation",
   contactType: "depannage",
   includeLausanne: true,
+  audience: {
+    professionals:
+      "Diagnostic du réseau d’air, remise en service documentée — pour régies, promoteurs et interlocuteurs de chantier.",
+    individuals:
+      "Nous identifions la panne et remettons l’air en route après visite — sans délai d’arrivée annoncé.",
+  },
   sections: [
     {
       title: "Quand appeler",
       answer:
-        "L’air vicié (CO₂, odeurs, humidité) se traite par un renouvellement d’air mécanique adapté et un entretien (filtres, bouches), pas seulement par une aération ponctuelle.",
-      body: "Bruit, perte de débit, hygrométrie qui dérive : nous relevons le réseau avant de préconiser une réparation ou un remplacement. Pas de délai d’arrivée annoncé.",
+        "L’air vicié (CO₂, odeurs, humidité), le bruit inhabituel, la perte de débit ou une hygrométrie qui dérive justifient un diagnostic du réseau.",
+      body: "Une aération ponctuelle ne remplace pas un renouvellement d’air mécanique adapté ni l’entretien des filtres et des bouches. Nous relevons le réseau avant de préconiser une réparation ou un remplacement. Pas de « urgence 24/7 » ni de délai d’arrivée promis sur cette page.",
     },
     {
       title: "Ce que nous faisons",
       answer:
-        "Relevé, identification, réparation ou préconisation de remplacement.",
-      body: "Selon l’état du caisson, des bouches et des gaines, l’intervention reste un dépannage ou bascule vers une rénovation. L’offre le dit clairement.",
+        "Relevé sur place, identification de la cause, réparation ciblée ou préconisation de remplacement, puis remise en service du réseau d’air.",
+      body: "Selon l’état du caisson, des bouches et des gaines, l’intervention reste un dépannage ou bascule vers une rénovation aéraulique. L’offre le dit clairement. Livrables typiques : constat, actions réalisées, observations utiles pour la suite (entretien ou reprise). Limite : hors chauffage, clim et plomberie ; pas de garantie de délai de remise en route avant diagnostic.",
     },
     {
       title: "Renens et alentours",
       answer:
         "BR Tech Sàrl a son siège à Renens (VD), Rue de Lausanne 49g, 1020, et travaille la ventilation en Suisse romande depuis cet ancrage.",
-      body: "La preuve locale est l’adresse, pas une galerie de communes. Une page par ville n’est publiée que si le territoire d’intervention est réel.",
+      body: "La preuve locale est l’adresse, pas une galerie de communes. Une page par ville n’est publiée que si le territoire d’intervention est réel. Lausanne et le reste du canton se confirment selon le type de projet.",
+    },
+    {
+      title: "Cadre normatif (référence métier)",
+      answer:
+        "Le diagnostic et la remise en service s’inscrivent dans le même cadre métier que l’installation : SIA 382/1 (bases et exigences), SIA 382/5:2021 pour l’habitation, SIA 180 pour humidité et climat intérieur.",
+      body: "Ces références aident à lire débits, hygiène de réseau et confort — elles ne sont pas présentées comme une certification de l’entreprise hors contexte d’intervention.",
     },
     {
       title: "Après la panne",
       answer:
-        "Un contrat d’entretien limite les pannes répétées sur filtres, débits et hygiène de réseau.",
+        "Un contrat d’entretien limite les pannes répétées liées aux filtres, aux débits et à l’hygiène de réseau.",
       body: "La maintenance est une offre séparée. Elle se discute après le diagnostic, sans l’imposer dans le dépannage.",
     },
   ],
@@ -232,7 +260,7 @@ export const depannagePage: ServicePageContent = {
     },
     {
       q: "L’humidité dans un appartement vient-elle d’un défaut de ventilation ?",
-      a: "Un renouvellement d’air insuffisant favorise l’humidité et les moisissures ; une VMC dimensionnée et entretenue évacue la vapeur d’eau, sans remplacer un diagnostic de l’enveloppe.",
+      a: "Un renouvellement d’air insuffisant favorise l’humidité et les moisissures ; une VMC dimensionnée et entretenue évacue la vapeur d’eau, sans remplacer un diagnostic de l’enveloppe. La SIA 180 traite notamment protection thermique, humidité et climat intérieur — cadre métier, pas diagnostic magique.",
     },
   ],
   related: [

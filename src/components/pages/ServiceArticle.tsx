@@ -57,6 +57,33 @@ export function ServiceArticle({
             ) : null}
           </div>
 
+          <section className="mt-12 border-t border-line pt-10">
+            <h2 className="text-[22px] font-semibold text-navy md:text-[24px]">
+              Pour qui
+            </h2>
+            <div className="mt-6 grid gap-8 sm:grid-cols-2 sm:gap-10">
+              <div>
+                <h3 className="text-[15px] font-semibold text-navy">
+                  Professionnels
+                </h3>
+                <p className="mt-1 text-[13px] text-ink-muted">
+                  Promoteurs · architectes · régies
+                </p>
+                <p className="mt-3 text-[15px] text-ink-secondary">
+                  {content.audience.professionals}
+                </p>
+              </div>
+              <div>
+                <h3 className="text-[15px] font-semibold text-navy">
+                  Particuliers
+                </h3>
+                <p className="mt-3 text-[15px] text-ink-secondary">
+                  {content.audience.individuals}
+                </p>
+              </div>
+            </div>
+          </section>
+
           {content.sections.map((section) => (
             <section key={section.title} className="mt-12 border-t border-line pt-10">
               <h2 className="text-[22px] font-semibold text-navy md:text-[24px]">
