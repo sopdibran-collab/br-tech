@@ -38,7 +38,7 @@ Inspirations calibrées : Apple (respiration) · Swiss / Rolex (calme) · Hälg/
 |---|---|---|
 | `color.ink` | `#2A2F36` | Texte principal |
 | `color.ink-secondary` | `#5C6670` | Texte secondaire |
-| `color.ink-muted` | `#8A949E` | Placeholders, meta |
+| `color.ink-muted` | `#5F6A74` | Placeholders, meta (AA ≥4.5:1 sur blanc / Snow) |
 | `color.line` | `#C9D3DC` | Bordures, filets |
 | `color.line-strong` | `#A8B4C0` | Inputs focus ring outer |
 | `color.surface` | `#FFFFFF` | Cards, header, inputs |

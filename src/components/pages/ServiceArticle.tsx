@@ -66,7 +66,7 @@ export function ServiceArticle({
                 <h3 className="text-[15px] font-semibold text-navy">
                   Professionnels
                 </h3>
-                <p className="mt-1 text-[13px] text-ink-muted">
+                <p className="mt-1 text-[13px] text-ink-secondary">
                   Promoteurs · architectes · régies
                 </p>
                 <p className="mt-3 text-[15px] text-ink-secondary">
@@ -111,7 +111,7 @@ export function ServiceArticle({
           </section>
 
           <nav aria-label="Pages liées" className="mt-12 border-t border-line pt-8">
-            <p className="text-[13px] text-ink-muted">Voir aussi</p>
+            <p className="text-[13px] text-ink-secondary">Voir aussi</p>
             <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
               {content.related.map((item) => (
                 <li key={item.href}>

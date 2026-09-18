@@ -46,7 +46,7 @@ export function Footer() {
             ))}
           </div>
           <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-[10px] uppercase tracking-wider text-white/45">
+            <span className="text-[10px] uppercase tracking-wider text-white/70">
               Prestations
             </span>
             {footerGroups.services.map((item) => (
@@ -56,7 +56,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-3 gap-y-1 px-5 py-2 text-[10px] text-white/50 md:px-8">
+        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-3 gap-y-1 px-5 py-2 text-[10px] text-white/70 md:px-8">
           <span>
             © {new Date().getFullYear()} {site.legalName}
           </span>

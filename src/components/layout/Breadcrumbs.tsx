@@ -8,7 +8,7 @@ export type Crumb = {
 export function Breadcrumbs({ items }: { items: readonly Crumb[] }) {
   return (
     <nav aria-label="Fil d’Ariane" className="mb-8">
-      <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-ink-muted">
+      <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-ink-secondary">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
