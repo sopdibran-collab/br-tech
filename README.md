@@ -67,6 +67,7 @@ Ouvrir **ce** dossier dans Cursor (pas `swiss-construction-intelligence`) :
 ```bash
 cd /Users/dibransopj/Documents/Github/br-tech-website
 npm install
+cp .env.example .env.local   # puis renseigner RESEND_API_KEY
 npm run dev
 ```
 
@@ -75,6 +76,21 @@ Engine (étape stratégie, autre workspace) :
 ```bash
 cd /Users/dibransopj/Documents/WEBDEV/swiss-construction-intelligence
 ```
+
+---
+
+## Formulaire contact (Resend)
+
+Envoi réel via [Resend](https://resend.com) — plus de fallback `mailto:`.
+
+| Variable | Requis | Description |
+| --- | --- | --- |
+| `RESEND_API_KEY` | Oui (prod) | Clé API Resend |
+| `CONTACT_FROM_EMAIL` | Non | Expéditeur. Défaut : `BR Tech <onboarding@resend.dev>` (tests). Après vérif. domaine : `BR Tech <contact@brtech.ch>` |
+| `CONTACT_TO_EMAIL` | Non | Destinataire. Défaut : `info@brtech.ch` (`site.email`) |
+
+Sans clé : message d’erreur en français (pas de mailto silencieux).  
+Après déploiement : ajouter `RESEND_API_KEY` sur Vercel et vérifier le domaine dans Resend (DNS Infomaniak).
 
 ---
 

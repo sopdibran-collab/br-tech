@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useEffect } from "react";
+import { useActionState } from "react";
 import { submitContact, type ContactState } from "@/app/contact/actions";
 import { projectTypes } from "@/config/site";
 import { contactCopy } from "@/content/contact";
@@ -14,12 +14,6 @@ export function ContactForm({ defaultType }: { defaultType?: string }) {
     submitContact,
     null as ContactState | null,
   );
-
-  useEffect(() => {
-    if (state?.ok && state.mailto) {
-      window.location.href = state.mailto;
-    }
-  }, [state]);
 
   const err = state?.errors ?? {};
 
