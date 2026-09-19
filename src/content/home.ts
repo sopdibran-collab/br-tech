@@ -109,9 +109,9 @@ export const home = {
   },
 
   team: {
-    title: "Une société récente, une expérience de terrain",
+    title: "Six personnes qualifiées",
     lead:
-      "BR Tech Sàrl est une entreprise jeune. Les deux fondateurs comptent chacun plus de dix ans d’expérience en ventilation. L’équipe réunit six personnes qualifiées, intervenues sur des chantiers de petite et moyenne taille en Suisse romande.",
+      "Une équipe de six collaborateurs qualifiés en ventilation, avec plus de dix ans d’expérience dans le métier. Préparée à relever les défis techniques sur des chantiers de petite et moyenne taille en Suisse romande.",
   },
   faq: {
     title: "Questions fréquentes",
