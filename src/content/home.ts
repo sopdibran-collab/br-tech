@@ -107,6 +107,12 @@ export const home = {
     reception:
       "À la réception : mesures de débit, schéma, PV de mise en service, chantier rangé, plan d’entretien.",
   },
+
+  team: {
+    title: "Six personnes qualifiées",
+    lead:
+      "Une équipe de six collaborateurs qualifiés en ventilation, avec plus de dix ans d’expérience dans le métier. Préparée à relever les défis techniques sur des chantiers de petite et moyenne taille en Suisse romande.",
+  },
   faq: {
     title: "Questions fréquentes",
     items: [

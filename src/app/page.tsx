@@ -160,6 +160,13 @@ export default function HomePage() {
         <p className="mt-10 max-w-[48ch] text-[15px] text-ink">{home.method.reception}</p>
       </Section>
 
+      <Section id="equipe" muted>
+        <h2 className="text-[24px] font-semibold text-navy md:text-[32px]">
+          {home.team.title}
+        </h2>
+        <p className="mt-4 max-w-[48ch] text-[17px] text-ink-secondary">{home.team.lead}</p>
+      </Section>
+
       <Section>
         <h2 className="max-w-[40rem] text-[24px] font-semibold text-navy md:text-[32px]">
           {home.faq.title}
