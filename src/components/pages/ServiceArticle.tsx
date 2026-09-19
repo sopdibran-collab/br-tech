@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { ContentSection } from "@/components/layout/ContentSection";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
@@ -20,7 +21,8 @@ export function ServiceArticle({
   crumbs: readonly { label: string; href?: string }[];
 }) {
   const contactHref = `/contact?type=${content.contactType}`;
-  const showVisite = content.contactType !== "depannage" && content.contactType !== "maintenance";
+  const showVisite =
+    content.contactType !== "depannage" && content.contactType !== "maintenance";
 
   const graph = [
     organizationNode(),
@@ -38,11 +40,16 @@ export function ServiceArticle({
     faqNode(content.faq),
   ];
 
+  // Intro = white (block 0). Later blocks alternate: odd = muted, even = white.
+  const isMuted = (blockIndex: number) => blockIndex % 2 === 1;
+  const faqIndex = 2 + content.sections.length;
+  const relatedIndex = faqIndex + 1;
+
   return (
     <>
       <JsonLd graph={graph} />
-      <article className="bg-white">
-        <div className="mx-auto max-w-[720px] px-5 py-14 md:px-8 md:py-20">
+      <article>
+        <ContentSection>
           <Breadcrumbs items={crumbs} />
           <h1 className="font-display text-[32px] font-semibold tracking-tight text-navy md:text-[40px]">
             {content.h1}
@@ -56,73 +63,78 @@ export function ServiceArticle({
               </ButtonLink>
             ) : null}
           </div>
+        </ContentSection>
 
-          <section className="mt-12 border-t border-line pt-10">
-            <h2 className="text-[22px] font-semibold text-navy md:text-[24px]">
-              Pour qui
-            </h2>
-            <div className="mt-6 grid gap-8 sm:grid-cols-2 sm:gap-10">
-              <div>
-                <h3 className="text-[15px] font-semibold text-navy">
-                  Professionnels
-                </h3>
-                <p className="mt-1 text-[13px] text-ink-secondary">
-                  Promoteurs · architectes · régies
-                </p>
-                <p className="mt-3 text-[15px] text-ink-secondary">
-                  {content.audience.professionals}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-[15px] font-semibold text-navy">
-                  Particuliers
-                </h3>
-                <p className="mt-3 text-[15px] text-ink-secondary">
-                  {content.audience.individuals}
-                </p>
-              </div>
+        <ContentSection muted={isMuted(1)}>
+          <h2 className="text-[22px] font-semibold text-navy md:text-[24px]">
+            Pour qui
+          </h2>
+          <div className="mt-6 grid gap-8 sm:grid-cols-2 sm:gap-10">
+            <div>
+              <h3 className="text-[15px] font-semibold text-navy">
+                Professionnels
+              </h3>
+              <p className="mt-1 text-[13px] text-ink-secondary">
+                Promoteurs · architectes · régies
+              </p>
+              <p className="mt-3 text-[15px] text-ink-secondary">
+                {content.audience.professionals}
+              </p>
             </div>
-          </section>
-
-          {content.sections.map((section) => (
-            <section key={section.title} className="mt-12 border-t border-line pt-10">
-              <h2 className="text-[22px] font-semibold text-navy md:text-[24px]">
-                {section.title}
-              </h2>
-              <p className="mt-3 text-[17px] text-ink">{section.answer}</p>
-              <p className="mt-3 text-[15px] text-ink-secondary">{section.body}</p>
-            </section>
-          ))}
-
-          <section className="mt-12 border-t border-line pt-10">
-            <h2 className="text-[22px] font-semibold text-navy md:text-[24px]">
-              Questions fréquentes
-            </h2>
-            <div className="mt-6 divide-y divide-line border-y border-line">
-              {content.faq.map((item) => (
-                <details key={item.q} className="py-4">
-                  <summary className="cursor-pointer list-none text-[17px] font-medium text-navy marker:content-none [&::-webkit-details-marker]:hidden">
-                    {item.q}
-                  </summary>
-                  <p className="mt-3 text-[15px] text-ink-secondary">{item.a}</p>
-                </details>
-              ))}
+            <div>
+              <h3 className="text-[15px] font-semibold text-navy">
+                Particuliers
+              </h3>
+              <p className="mt-3 text-[15px] text-ink-secondary">
+                {content.audience.individuals}
+              </p>
             </div>
-          </section>
+          </div>
+        </ContentSection>
 
-          <nav aria-label="Pages liées" className="mt-12 border-t border-line pt-8">
+        {content.sections.map((section, i) => (
+          <ContentSection key={section.title} muted={isMuted(2 + i)}>
+            <h2 className="text-[22px] font-semibold text-navy md:text-[24px]">
+              {section.title}
+            </h2>
+            <p className="mt-3 text-[17px] text-ink">{section.answer}</p>
+            <p className="mt-3 text-[15px] text-ink-secondary">{section.body}</p>
+          </ContentSection>
+        ))}
+
+        <ContentSection muted={isMuted(faqIndex)}>
+          <h2 className="text-[22px] font-semibold text-navy md:text-[24px]">
+            Questions fréquentes
+          </h2>
+          <div className="mt-6 divide-y divide-line border-y border-line">
+            {content.faq.map((item) => (
+              <details key={item.q} className="py-4">
+                <summary className="cursor-pointer list-none text-[17px] font-medium text-navy marker:content-none [&::-webkit-details-marker]:hidden">
+                  {item.q}
+                </summary>
+                <p className="mt-3 text-[15px] text-ink-secondary">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </ContentSection>
+
+        <ContentSection muted={isMuted(relatedIndex)} tight>
+          <nav aria-label="Pages liées">
             <p className="text-[13px] text-ink-secondary">Voir aussi</p>
             <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
               {content.related.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-[15px] text-primary hover:text-primary-hover">
+                  <Link
+                    href={item.href}
+                    className="text-[15px] text-primary hover:text-primary-hover"
+                  >
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
-        </div>
+        </ContentSection>
       </article>
       <CtaBand
         title="Un bâtiment à ventiler ?"
