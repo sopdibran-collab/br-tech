@@ -107,6 +107,12 @@ export const home = {
     reception:
       "À la réception : mesures de débit, schéma, PV de mise en service, chantier rangé, plan d’entretien.",
   },
+
+  team: {
+    title: "Une société récente, une expérience de terrain",
+    lead:
+      "BR Tech Sàrl est une entreprise jeune. Les deux fondateurs comptent chacun plus de dix ans d’expérience en ventilation. L’équipe réunit six personnes qualifiées, intervenues sur des chantiers de petite et moyenne taille en Suisse romande.",
+  },
   faq: {
     title: "Questions fréquentes",
     items: [
