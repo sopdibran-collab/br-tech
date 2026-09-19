@@ -68,7 +68,8 @@ export default function ServicesHubPage() {
         <ContentSection muted>
           <h2 className="text-[22px] font-semibold text-navy">Maintenance</h2>
           <p className="mt-3 text-[17px] text-ink">
-            L’entretien préventif n’est pas un sous-lien des services.
+            L’entretien préventif et le contrat d’entretien font l’objet d’une
+            offre dédiée.
           </p>
           <p className="mt-3 text-[15px] text-ink-secondary">
             {servicesHub.maintenance.text}
@@ -90,8 +91,8 @@ export default function ServicesHubPage() {
         <ContentSection>
           <h2 className="text-[22px] font-semibold text-navy">Autres besoins</h2>
           <p className="mt-3 text-[17px] text-ink">
-            Remplacement, extraction, étude et plans, nettoyage ou réparation se
-            discutent au devis — les pages dédiées viendront ensuite.
+            Remplacement, extraction, étude et plans, nettoyage ou réparation :
+            décrivez votre besoin, nous établissons le devis.
           </p>
           <ul className="mt-6 divide-y divide-line border-y border-line">
             {servicesHub.later.map((item) => (
