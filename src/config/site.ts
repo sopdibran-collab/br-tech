@@ -76,7 +76,6 @@ export const serviceNavLive: readonly NavItem[] = [
 export const navigationRoutes: readonly NavItem[] = [
   { label: "Services", href: "/services", children: serviceNavLive },
   { label: "Secteurs", href: "/#secteurs" },
-  { label: "Réalisations", href: "/#realisations" },
   { label: "Maintenance", href: "/maintenance" },
   { label: "À propos", href: "/#pourquoi" },
   { label: "Contact", href: "/contact" },

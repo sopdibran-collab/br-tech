@@ -160,13 +160,6 @@ export default function HomePage() {
         <p className="mt-10 max-w-[48ch] text-[15px] text-ink">{home.method.reception}</p>
       </Section>
 
-      <Section id="realisations" tight>
-        <h2 className="text-[24px] font-semibold text-navy md:text-[32px]">Réalisations</h2>
-        <p className="mt-3 max-w-[44ch] text-ink-secondary">
-          Les photographies de chantiers seront publiées après le shooting.
-        </p>
-      </Section>
-
       <Section>
         <h2 className="max-w-[40rem] text-[24px] font-semibold text-navy md:text-[32px]">
           {home.faq.title}

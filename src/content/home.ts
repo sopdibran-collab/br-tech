@@ -31,7 +31,7 @@ export const home = {
       },
       {
         title: "Cadre de projet",
-        text: "Interventions inscrites dans les projets SIA et, le cas échéant, les bâtiments Minergie — cadre métier, pas une certification affichée hors contexte.",
+        text: "Interventions inscrites dans les projets SIA et, le cas échéant, les bâtiments Minergie, selon le cahier des charges du projet.",
       },
       {
         title: "Chantier planifié",
@@ -124,7 +124,7 @@ export const home = {
       },
       {
         q: "Proposez-vous l’entretien après installation ?",
-        a: "Oui. L’entretien préventif et le contrat se discutent après installation : débits, hygiène, passages documentés.",
+        a: "Oui. Après l’installation, nous proposons un entretien préventif et un contrat : débits, hygiène, passages documentés.",
       },
       {
         q: "Pour qui travaillez-vous ?",
