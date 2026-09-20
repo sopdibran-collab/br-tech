@@ -5,10 +5,12 @@ export function CtaBand({
   title,
   text,
   href = cta.primary.href,
+  label = cta.primary.label,
 }: {
   title: string;
   text: string;
   href?: string;
+  label?: string;
 }) {
   return (
     <section className="bg-navy text-white">
@@ -18,7 +20,7 @@ export function CtaBand({
           <p className="mt-2 max-w-[42ch] text-white/75">{text}</p>
         </div>
         <ButtonLink href={href} variant="inverse">
-          {cta.primary.label}
+          {label}
         </ButtonLink>
       </div>
     </section>
