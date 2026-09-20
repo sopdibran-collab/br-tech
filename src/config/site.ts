@@ -77,7 +77,7 @@ export const navigationRoutes: readonly NavItem[] = [
   { label: "Services", href: "/services", children: serviceNavLive },
   { label: "Secteurs", href: "/#secteurs" },
   { label: "Maintenance", href: "/maintenance" },
-  { label: "À propos", href: "/#pourquoi" },
+  { label: "À propos", href: "/a-propos" },
   { label: "Contact", href: "/contact" },
 ] as const;
 

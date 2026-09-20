@@ -109,9 +109,11 @@ export const home = {
   },
 
   team: {
-    title: "Six personnes qualifiées",
+    title: "À propos",
     lead:
-      "Une équipe de six collaborateurs qualifiés en ventilation, avec plus de dix ans d’expérience dans le métier. Préparée à relever les défis techniques sur des chantiers de petite et moyenne taille en Suisse romande.",
+      "Une équipe resserrée de spécialistes de l’air, menée par des professionnels rompus au métier depuis plus de dix ans.",
+    href: "/a-propos",
+    linkLabel: "Lire la suite",
   },
   faq: {
     title: "Questions fréquentes",
