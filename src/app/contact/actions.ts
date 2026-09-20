@@ -1,5 +1,6 @@
 "use server";
 
+import { redirect } from "next/navigation";
 import { Resend } from "resend";
 import { z } from "zod";
 import { projectTypes, site } from "@/config/site";
@@ -175,5 +176,5 @@ export async function submitContact(
     };
   }
 
-  return { ok: true };
+  redirect("/merci");
 }

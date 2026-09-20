@@ -23,7 +23,7 @@ export const home = {
   ],
   why: {
     title: "L’expertise ventilation",
-    lead: "Un lot air uniquement — pas de chauffage, ni de climatisation, ni de plomberie. Documenté, calé sur le bâtiment et le planning.",
+    lead: "Spécialistes ventilation — un lot air documenté, calé sur le bâtiment et le planning.",
     items: [
       {
         title: "Installation documentée",
@@ -120,7 +120,7 @@ export const home = {
     items: [
       {
         q: "Vous êtes ventiliste ou CVC généraliste ?",
-        a: "Ventiliste. Installation, rénovation et entretien de réseaux d’air — pas le chauffage, ni la climatisation, ni la plomberie.",
+        a: "Ventiliste. Installation, rénovation et entretien de réseaux d’air. Offre limitée à la ventilation.",
       },
       {
         q: "Où intervenez-vous ?",
