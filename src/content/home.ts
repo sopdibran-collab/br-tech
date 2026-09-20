@@ -109,9 +109,9 @@ export const home = {
   },
 
   team: {
-    title: "Six personnes qualifiées",
+    title: "Une équipe à taille humaine",
     lead:
-      "Une équipe de six collaborateurs qualifiés en ventilation, avec plus de dix ans d’expérience dans le métier. Préparée à relever les défis techniques sur des chantiers de petite et moyenne taille en Suisse romande.",
+      "Des spécialistes de la ventilation guidés par des experts chevronnés (+10 ans d’expérience). Nous intervenons sur vos chantiers de petite et moyenne taille partout en Suisse romande.",
   },
   faq: {
     title: "Questions fréquentes",
