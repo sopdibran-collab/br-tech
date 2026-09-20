@@ -21,6 +21,7 @@ export function ServiceArticle({
   crumbs: readonly { label: string; href?: string }[];
 }) {
   const contactHref = `/contact?type=${content.contactType}`;
+  const isDepannage = content.contactType === "depannage";
   const showVisite =
     content.contactType !== "depannage" && content.contactType !== "maintenance";
 
@@ -56,12 +57,23 @@ export function ServiceArticle({
           </h1>
           <p className="mt-5 text-[17px] text-ink">{content.lead}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <ButtonLink href={contactHref}>{cta.primary.label}</ButtonLink>
-            {showVisite ? (
-              <ButtonLink href={cta.secondary.href} variant="secondary">
-                {cta.secondary.label}
-              </ButtonLink>
-            ) : null}
+            {isDepannage ? (
+              <>
+                <ButtonLink href={cta.call.href}>{cta.call.label}</ButtonLink>
+                <ButtonLink href={contactHref} variant="secondary">
+                  {cta.primary.label}
+                </ButtonLink>
+              </>
+            ) : (
+              <>
+                <ButtonLink href={contactHref}>{cta.primary.label}</ButtonLink>
+                {showVisite ? (
+                  <ButtonLink href={cta.secondary.href} variant="secondary">
+                    {cta.secondary.label}
+                  </ButtonLink>
+                ) : null}
+              </>
+            )}
           </div>
         </ContentSection>
 
@@ -122,25 +134,43 @@ export function ServiceArticle({
           <nav aria-label="Pages liées">
             <p className="text-[13px] text-ink-secondary">Voir aussi</p>
             <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
-              {content.related.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-[15px] text-primary hover:text-primary-hover"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {content.related.map((item) => {
+                const external =
+                  item.href.startsWith("tel:") || item.href.startsWith("mailto:");
+                const className =
+                  "text-[15px] text-primary hover:text-primary-hover";
+                return (
+                  <li key={item.href}>
+                    {external ? (
+                      <a href={item.href} className={className}>
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link href={item.href} className={className}>
+                        {item.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         </ContentSection>
       </article>
-      <CtaBand
-        title="Un bâtiment à ventiler ?"
-        text="Décrivez le bâtiment, le besoin et le délai — nous revenons vers vous."
-        href={contactHref}
-      />
+      {isDepannage ? (
+        <CtaBand
+          title="Une panne de ventilation ?"
+          text="Appelez-nous pour un diagnostic — le délai d’intervention est fixé après le relevé."
+          href={cta.call.href}
+          label={cta.call.label}
+        />
+      ) : (
+        <CtaBand
+          title="Un bâtiment à ventiler ?"
+          text="Décrivez le bâtiment, le besoin et le délai — nous revenons vers vous."
+          href={contactHref}
+        />
+      )}
     </>
   );
 }
