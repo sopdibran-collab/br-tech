@@ -165,6 +165,14 @@ export default function HomePage() {
           {home.team.title}
         </h2>
         <p className="mt-4 max-w-[48ch] text-[17px] text-ink-secondary">{home.team.lead}</p>
+        <p className="mt-6">
+          <Link
+            href={home.team.href}
+            className="text-[15px] text-primary hover:text-primary-hover"
+          >
+            {home.team.linkLabel}
+          </Link>
+        </p>
       </Section>
 
       <Section>

@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/double-flux",
     "/services/depannage",
     "/maintenance",
+    "/a-propos",
     "/contact",
     "/mentions-legales",
     "/confidentialite",
