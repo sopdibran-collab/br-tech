@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { StickyMobileCta } from "@/components/layout/StickyMobileCta";
-import { site } from "@/config/site";
+import { site, socialMeta } from "@/config/site";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -38,9 +38,17 @@ export const metadata: Metadata = {
     "BR Tech Sàrl installe et entretient la ventilation à Renens — Vaud, Fribourg, Genève, Neuchâtel et Valais. VMC, réseaux, entretien. Devis après visite technique.",
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    locale: "fr_CH",
+    title: socialMeta.title,
+    description: socialMeta.description,
+    url: site.url,
     siteName: site.legalName,
     type: "website",
+    locale: "fr_CH",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: socialMeta.title,
+    description: socialMeta.description,
   },
 };
 

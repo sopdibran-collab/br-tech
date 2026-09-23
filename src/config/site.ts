@@ -48,6 +48,15 @@ export const site = {
   },
 } as const;
 
+/** Partage social — distinct du <title> SEO. Signature et zone verrouillées. */
+export const socialMeta = {
+  title: `${site.legalName} — ${site.signature}`,
+  description:
+    "Installation, rénovation et entretien de ventilation à Renens. VMC, réseaux et dépannage — Vaud, Fribourg, Genève, Neuchâtel et Valais. Devis après visite technique.",
+  imageAlt: `${site.legalName} — ${site.signature} Spécialistes ventilation en Suisse romande, depuis Renens.`,
+  cardLead: "Installation, entretien et dépannage de ventilation.",
+} as const;
+
 export function formatAddress() {
   return `${site.address.street}, ${site.address.postalCode} ${site.address.city} (${site.address.region})`;
 }
