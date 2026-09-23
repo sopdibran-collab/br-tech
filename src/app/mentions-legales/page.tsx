@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { mentions } from "@/content/legal";
+import { pageMeta } from "@/lib/page-meta";
 
-export const metadata: Metadata = { title: mentions.title };
+export const metadata: Metadata = pageMeta({
+  title: mentions.title,
+  description: mentions.description,
+  path: mentions.path,
+});
 
 export default function MentionsPage() {
   return (
