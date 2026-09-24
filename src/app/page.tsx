@@ -9,9 +9,6 @@ import { faqNode, organizationNode } from "@/components/seo/schema";
 import { cta } from "@/config/site";
 import { home } from "@/content/home";
 import heroPhoto from "../../public/images/hero.webp";
-import hallPhoto from "../../assets/photos/halle-gaines.jpg";
-import roofOutletPhoto from "../../assets/photos/sortie-toiture.jpg";
-import extractorsPhoto from "../../assets/photos/extracteurs-toiture.jpg";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -145,60 +142,6 @@ export default function HomePage() {
           <ButtonLink href={cta.primary.href}>{cta.primary.label}</ButtonLink>
         </p>
       </Section>
-
-      <section id="realisations" className="bg-surface-page">
-        <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-20">
-          <h2 className="text-[24px] font-semibold text-navy md:text-[32px]">
-            {home.realisations.title}
-          </h2>
-          <p className="mt-3 max-w-[42ch] text-ink-secondary">
-            {home.realisations.lead}
-          </p>
-          <div className="mt-10 grid items-stretch gap-8 md:grid-cols-[1.45fr_1fr] md:gap-6">
-            <figure>
-              <Image
-                src={hallPhoto}
-                alt={home.realisations.hall.alt}
-                sizes="(min-width: 768px) 58vw, 100vw"
-                className="aspect-[1372/980] w-full rounded-[4px] object-cover"
-              />
-              <figcaption className="mt-2 text-[13px] text-ink-secondary">
-                {home.realisations.hall.caption}
-              </figcaption>
-            </figure>
-            <div className="grid gap-8 md:h-full md:grid-rows-2 md:gap-6">
-              <figure className="flex flex-col md:min-h-0">
-                <div className="relative aspect-[3/2] overflow-hidden rounded-[4px] md:aspect-auto md:min-h-0 md:flex-1">
-                  <Image
-                    src={roofOutletPhoto}
-                    alt={home.realisations.roofOutlet.alt}
-                    fill
-                    sizes="(min-width: 768px) 34vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-                <figcaption className="mt-2 text-[13px] text-ink-secondary">
-                  {home.realisations.roofOutlet.caption}
-                </figcaption>
-              </figure>
-              <figure className="flex flex-col md:min-h-0">
-                <div className="relative aspect-[3/2] overflow-hidden rounded-[4px] md:aspect-auto md:min-h-0 md:flex-1">
-                  <Image
-                    src={extractorsPhoto}
-                    alt={home.realisations.extractors.alt}
-                    fill
-                    sizes="(min-width: 768px) 34vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-                <figcaption className="mt-2 text-[13px] text-ink-secondary">
-                  {home.realisations.extractors.caption}
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Section id="methode" muted>
         <h2 className="text-[24px] font-semibold text-navy md:text-[32px]">

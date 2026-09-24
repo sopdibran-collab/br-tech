@@ -98,3 +98,26 @@ h3,
   }
 }
 
+/* Voile neige pour un hero photo intérieur : le titre reste lisible à gauche. */
+.page-hero-veil {
+  background: linear-gradient(
+    90deg,
+    rgb(247 249 251 / 0.97) 0%,
+    rgb(247 249 251 / 0.92) 28%,
+    rgb(247 249 251 / 0.42) 52%,
+    rgb(247 249 251 / 0) 74%
+  );
+}
+
+@media (max-width: 767px) {
+  .page-hero-veil {
+    background: linear-gradient(
+      180deg,
+      rgb(247 249 251 / 0.97) 0%,
+      rgb(247 249 251 / 0.9) 36%,
+      rgb(247 249 251 / 0.28) 70%,
+      rgb(247 249 251 / 0) 100%
+    );
+  }
+}
+

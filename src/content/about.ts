@@ -1,6 +1,8 @@
 export const about = {
   path: "/a-propos",
   title: "À propos",
+  heroAlt:
+    "Réseau de gaines de ventilation suspendu dans une halle, charpente métallique",
   description:
     "BR Tech Sàrl — ventilation à Renens et en Suisse romande. Équipe de spécialistes, installations calées sur le bâtiment et le cahier des charges.",
   paragraphs: [

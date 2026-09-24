@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { ServiceArticle } from "@/components/pages/ServiceArticle";
 import { installationPage } from "@/content/services";
-import { home } from "@/content/home";
 import { pageMeta } from "@/lib/page-meta";
-import hallPhoto from "../../../../assets/photos/halle-gaines.jpg";
 
 export const metadata: Metadata = pageMeta({
   title: installationPage.title,
@@ -20,11 +18,6 @@ export default function InstallationPage() {
         { label: "Services", href: "/services" },
         { label: "Installation" },
       ]}
-      image={{
-        src: hallPhoto,
-        alt: home.realisations.hall.alt,
-        caption: home.realisations.hall.caption,
-      }}
     />
   );
 }

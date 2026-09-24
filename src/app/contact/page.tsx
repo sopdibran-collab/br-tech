@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/app/contact/ContactForm";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbNode, organizationNode } from "@/components/seo/schema";
 import { formatAddress, site } from "@/config/site";
 import { contactCopy } from "@/content/contact";
 import { pageMeta } from "@/lib/page-meta";
+import roofOutletPhoto from "../../../assets/photos/sortie-toiture.jpg";
 
 export const metadata: Metadata = pageMeta({
   title: contactCopy.metaTitle,
@@ -32,20 +33,21 @@ export default async function ContactPage({
           ]),
         ]}
       />
+      <PageHero
+        image={roofOutletPhoto}
+        alt={contactCopy.heroAlt}
+        objectPosition="62% 42%"
+        crumbs={[
+          { label: "Accueil", href: "/" },
+          { label: "Contact" },
+        ]}
+        title={contactCopy.title}
+        lead={contactCopy.lead}
+      />
       <div className="mx-auto grid max-w-[1200px] gap-12 px-5 py-14 md:grid-cols-12 md:px-8 md:py-20">
         <div className="md:col-span-7">
-          <Breadcrumbs
-            items={[
-              { label: "Accueil", href: "/" },
-              { label: "Contact" },
-            ]}
-          />
-          <h1 className="text-[32px] font-semibold text-navy md:text-[40px]">
-            {contactCopy.title}
-          </h1>
-          <p className="mt-3 text-ink-secondary">{contactCopy.lead}</p>
-          <p className="mt-3 text-[15px] text-ink">{contactCopy.aeo}</p>
-          <div className="mt-10">
+          <p className="text-[15px] text-ink">{contactCopy.aeo}</p>
+          <div className="mt-8">
             <ContactForm defaultType={type} />
           </div>
         </div>
