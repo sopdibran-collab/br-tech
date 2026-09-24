@@ -1,3 +1,4 @@
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ContentSection } from "@/components/layout/ContentSection";
@@ -16,9 +17,11 @@ import type { ServicePageContent } from "@/content/types";
 export function ServiceArticle({
   content,
   crumbs,
+  image,
 }: {
   content: ServicePageContent;
   crumbs: readonly { label: string; href?: string }[];
+  image?: { src: StaticImageData; alt: string; caption: string };
 }) {
   const contactHref = `/contact?type=${content.contactType}`;
   const isDepannage = content.contactType === "depannage";
@@ -75,6 +78,19 @@ export function ServiceArticle({
               </>
             )}
           </div>
+          {image ? (
+            <figure className="mt-10">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                sizes="(min-width: 768px) 720px, 100vw"
+                className="aspect-[1372/980] w-full rounded-[4px] object-cover"
+              />
+              <figcaption className="mt-2 text-[13px] text-ink-secondary">
+                {image.caption}
+              </figcaption>
+            </figure>
+          ) : null}
         </ContentSection>
 
         <ContentSection muted={isMuted(1)}>
