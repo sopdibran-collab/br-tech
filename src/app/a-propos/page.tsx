@@ -33,17 +33,12 @@ export default function AboutPage() {
             ))}
           </div>
         </article>
-        <figure>
-          <Image
-            src={roofOutletPhoto}
-            alt={home.realisations.roofOutlet.alt}
-            sizes="(min-width: 768px) 38vw, 100vw"
-            className="aspect-[3/2] w-full rounded-[4px] object-cover"
-          />
-          <figcaption className="mt-2 text-[13px] text-ink-secondary">
-            {home.realisations.roofOutlet.caption}
-          </figcaption>
-        </figure>
+        <Image
+          src={roofOutletPhoto}
+          alt={home.illustrations.roofOutlet.alt}
+          sizes="(min-width: 768px) 38vw, 100vw"
+          className="aspect-[3/2] w-full rounded-[4px] object-cover"
+        />
       </div>
       <CtaBand title={about.band.title} text={about.band.text} />
     </>

@@ -22,8 +22,7 @@ export default function InstallationPage() {
       ]}
       image={{
         src: hallPhoto,
-        alt: home.realisations.hall.alt,
-        caption: home.realisations.hall.caption,
+        alt: home.illustrations.hall.alt,
       }}
     />
   );

@@ -69,20 +69,15 @@ export const home = {
     allHref: "/services",
     allLabel: "Tous les services",
   },
-  realisations: {
-    title: "Réalisations",
-    lead: "Gaines, sorties et extracteurs — le visible du réseau d’air.",
+  illustrations: {
     hall: {
       alt: "Réseau de gaines de ventilation suspendu dans une halle, charpente métallique",
-      caption: "Réseau de gaines",
     },
     roofOutlet: {
       alt: "Sortie de toiture en acier, grille de protection, au-dessus d’un paysage",
-      caption: "Sortie de toiture",
     },
     extractors: {
       alt: "Quatre extracteurs de toiture en acier sur un toit, devant un immeuble",
-      caption: "Extracteurs de toiture",
     },
   },
   method: {
