@@ -8,9 +8,6 @@ import { faqNode, organizationNode } from "@/components/seo/schema";
 import { cta } from "@/config/site";
 import { home } from "@/content/home";
 import heroPhoto from "../../public/images/hero.webp";
-import hallPhoto from "../../assets/photos/halle-gaines.jpg";
-import roofOutletPhoto from "../../assets/photos/sortie-toiture.jpg";
-import extractorsPhoto from "../../assets/photos/extracteurs-toiture.jpg";
 
 function Section({
   id,
@@ -140,39 +137,6 @@ export default function HomePage() {
           <ButtonLink href={cta.primary.href}>{cta.primary.label}</ButtonLink>
         </p>
       </Section>
-
-      <section aria-label="Illustrations de ventilation" className="bg-surface-page">
-        <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-20">
-          <div className="grid items-stretch gap-4 md:grid-cols-[1.45fr_1fr] md:gap-6">
-            <Image
-              src={hallPhoto}
-              alt={home.illustrations.hall.alt}
-              sizes="(min-width: 768px) 58vw, 100vw"
-              className="aspect-[1372/980] h-full w-full rounded-[4px] object-cover"
-            />
-            <div className="grid gap-4 md:h-full md:grid-rows-2 md:gap-6">
-              <div className="relative aspect-[3/2] overflow-hidden rounded-[4px] md:aspect-auto md:h-full md:min-h-0">
-                <Image
-                  src={roofOutletPhoto}
-                  alt={home.illustrations.roofOutlet.alt}
-                  fill
-                  sizes="(min-width: 768px) 34vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[3/2] overflow-hidden rounded-[4px] md:aspect-auto md:h-full md:min-h-0">
-                <Image
-                  src={extractorsPhoto}
-                  alt={home.illustrations.extractors.alt}
-                  fill
-                  sizes="(min-width: 768px) 34vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Section id="methode" muted>
         <h2 className="text-[24px] font-semibold text-navy md:text-[32px]">

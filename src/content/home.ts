@@ -69,17 +69,6 @@ export const home = {
     allHref: "/services",
     allLabel: "Tous les services",
   },
-  illustrations: {
-    hall: {
-      alt: "Réseau de gaines de ventilation suspendu dans une halle, charpente métallique",
-    },
-    roofOutlet: {
-      alt: "Sortie de toiture en acier, grille de protection, au-dessus d’un paysage",
-    },
-    extractors: {
-      alt: "Quatre extracteurs de toiture en acier sur un toit, devant un immeuble",
-    },
-  },
   method: {
     title: "Du contact à l’entretien",
     lead: "Une affaire se tient dans cet ordre.",

@@ -2,6 +2,8 @@ import { site } from "@/config/site";
 
 export const contactCopy = {
   title: "Contact",
+  heroAlt:
+    "Sortie de toiture en acier, grille de protection, au-dessus d’un paysage",
   lead: `Demandez un devis, une étude ou une visite technique pour un logement, un immeuble ou un chantier dans les ${site.serviceZone.display}.`,
   aeo: "Le devis suit la compréhension du besoin, et une visite technique si elle est nécessaire. Étude et élaboration de plans sur demande.",
   success:
