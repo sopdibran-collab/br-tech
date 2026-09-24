@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { privacy } from "@/content/legal";
+import { pageMeta } from "@/lib/page-meta";
 
-export const metadata: Metadata = { title: privacy.title };
+export const metadata: Metadata = pageMeta({
+  title: privacy.title,
+  description: privacy.description,
+  path: privacy.path,
+});
 
 export default function ConfidentialitePage() {
   return (

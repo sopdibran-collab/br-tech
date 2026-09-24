@@ -1,7 +1,9 @@
 import { formatAddress, site } from "@/config/site";
 
 export const mentions = {
+  path: "/mentions-legales",
   title: "Mentions légales",
+  description: `Mentions légales de ${site.legalName}, ${formatAddress()}. Hébergement Vercel, domaine et messagerie Infomaniak.`,
   paragraphs: [
     `${site.legalName}, ${formatAddress()}, ${site.address.countryName}.`,
     `E-mail : ${site.email}. Téléphone : ${site.phoneDisplay}${site.phoneConfirmed ? "" : " (à confirmer)."}.`,
@@ -11,7 +13,9 @@ export const mentions = {
 };
 
 export const privacy = {
+  path: "/confidentialite",
   title: "Confidentialité",
+  description: `Confidentialité (nLPD) de ${site.legalName} : données du formulaire de contact, accès, rectification et suppression via ${site.email}.`,
   paragraphs: [
     `Les données du formulaire de contact (nom, société, téléphone, e-mail, localisation, message) sont utilisées uniquement pour traiter votre demande. Responsable : ${site.legalName}, ${formatAddress()}.`,
     `Base : exécution de mesures précontractuelles à votre demande, conformément à la nLPD. Destinataire : l’entreprise. Pas de revente. Durée : le temps du traitement de la demande, puis suppression ou archivage selon obligations légales.`,

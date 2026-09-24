@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BrandIcon } from "@/components/icons/BrandIcon";
@@ -8,6 +9,10 @@ import { faqNode, organizationNode } from "@/components/seo/schema";
 import { cta } from "@/config/site";
 import { home } from "@/content/home";
 import heroPhoto from "../../public/images/hero.webp";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 function Section({
   id,
