@@ -36,7 +36,15 @@ export const metadata: Metadata = {
   },
   description:
     "BR Tech Sàrl installe et entretient la ventilation à Renens — Vaud, Fribourg, Genève, Neuchâtel et Valais. VMC, réseaux, entretien. Devis après visite technique.",
-  icons: { icon: "/favicon.svg" },
+  icons: {
+    icon: [
+      { url: "/favicon-96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   robots: {
     index: true,
     follow: true,
