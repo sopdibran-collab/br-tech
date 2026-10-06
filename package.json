@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "indexnow": "node scripts/ping-indexnow.mjs",
+    "test": "node --test scripts/ping-indexnow.test.mjs"
   },
   "engines": {
     "node": ">=20"
