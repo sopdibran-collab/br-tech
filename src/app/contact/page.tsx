@@ -8,6 +8,11 @@ import { contactCopy } from "@/content/contact";
 import { pageMeta } from "@/lib/page-meta";
 import roofOutletPhoto from "../../../assets/photos/sortie-toiture.jpg";
 
+const MAP_EMBED_SRC =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.6839842427353!2d6.590294499999999!3d46.5341549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c31fb36385d73%3A0x2802a37ea7b6971a!2sBR%20tech%20sarl!5e0!3m2!1sfr!2sch!4v1791407210324!5m2!1sfr!2sch";
+const MAP_LINK_HREF =
+  "https://maps.google.com/?q=BR+Tech+S%C3%A0rl+Rue+de+Lausanne+49g+1020+Renens";
+
 export const metadata: Metadata = pageMeta({
   title: contactCopy.metaTitle,
   description: contactCopy.metaDescription,
@@ -68,10 +73,30 @@ export default async function ContactPage({
             <p className="mt-6 text-[14px] text-ink-secondary">
               Horaires : {site.hours.display}.
             </p>
-            <p className="mt-2 text-[14px] text-ink-secondary">
-              Carte : {address}.
-            </p>
           </div>
+          <figure className="mt-6">
+            <div className="overflow-hidden rounded-[4px] border border-line bg-white">
+              <iframe
+                src={MAP_EMBED_SRC}
+                title={`Carte : ${site.legalName}, ${site.address.street}, ${site.address.postalCode} ${site.address.city}`}
+                className="block h-[400px] w-full border-0"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+            <figcaption className="mt-3 text-[14px]">
+              <a
+                href={MAP_LINK_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Ouvrir dans Google Maps
+                <span className="sr-only"> (nouvel onglet)</span>
+              </a>
+            </figcaption>
+          </figure>
         </aside>
       </div>
     </div>
