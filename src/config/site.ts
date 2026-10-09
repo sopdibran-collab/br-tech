@@ -52,7 +52,7 @@ export const site = {
 export const socialMeta = {
   title: `${site.legalName} — ${site.signature}`,
   description:
-    "Installation, rénovation et entretien de ventilation à Renens. VMC, réseaux et dépannage — Vaud, Fribourg, Genève, Neuchâtel et Valais. Devis après visite technique.",
+    "Installation, rénovation et entretien de la ventilation à Renens et en Suisse romande. BR Tech Sàrl — Vaud, Fribourg, Genève, Neuchâtel, Valais.",
   imageAlt: `${site.legalName} — ${site.signature} Spécialistes ventilation en Suisse romande, depuis Renens.`,
   cardLead: "Installation, entretien et dépannage de ventilation.",
 } as const;

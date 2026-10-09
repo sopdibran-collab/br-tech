@@ -1,7 +1,7 @@
 import { site } from "@/config/site";
 
 export const contactCopy = {
-  title: "Contact",
+  title: "Contact — ventilation à Renens",
   heroAlt:
     "Sortie de toiture en acier, grille de protection, au-dessus d’un paysage",
   lead: `Demandez un devis, une étude ou une visite technique pour un logement, un immeuble ou un chantier dans les ${site.serviceZone.display}.`,
@@ -13,5 +13,6 @@ export const contactCopy = {
     "J’accepte que BR Tech Sàrl utilise ces données pour traiter ma demande (nLPD).",
   placeholderMessage: "Décrivez le bâtiment, le besoin et le délai souhaité.",
   metaTitle: "Devis ventilation Suisse romande",
-  metaDescription: `Demander un devis ou planifier une visite technique — ventilation à Renens et dans les ${site.serviceZone.display}. BR Tech Sàrl.`,
+  metaDescription:
+    "Demandez un devis ou une visite technique pour la ventilation à Renens. BR Tech Sàrl répond aux particuliers, régies et entreprises en Suisse romande.",
 } as const;
