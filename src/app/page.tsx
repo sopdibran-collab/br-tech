@@ -51,10 +51,9 @@ export default function HomePage() {
           fill
           priority
           placeholder="blur"
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 1536px"
           className="object-cover object-[62%_42%] md:object-[72%_48%]"
         />
-        <div className="hero-veil absolute inset-0" aria-hidden />
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-[1200px] flex-col justify-center px-5 py-16 md:min-h-[calc(100vh-72px)] md:px-8">
           <h1 className="max-w-[16ch] font-display text-[36px] font-semibold tracking-tight text-navy sm:text-[48px] lg:text-[56px] lg:leading-[1.12]">
             {home.hero.h1}

@@ -75,7 +75,7 @@ export function ContactForm({ defaultType }: { defaultType?: string }) {
           type="checkbox"
           name="consent"
           required
-          className="mt-1 size-4 rounded-[2px] border-line"
+          className="consent-check mt-0.5 shrink-0 rounded-[2px] border border-line accent-primary"
         />
         <span>
           {contactCopy.consent}
