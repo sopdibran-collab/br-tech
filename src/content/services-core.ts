@@ -6,7 +6,7 @@ export const servicesHub = {
   description:
     "Installation, VMC double flux et dépannage de ventilation à Renens et en Suisse romande. BR Tech Sàrl : entretien préventif et contrats de maintenance.",
   h1: "Installation, double flux et dépannage",
-  lead: `BR Tech Sàrl conçoit, pose et dépanne les réseaux de ventilation depuis Renens, dans les ${site.serviceZone.display}. Trois portes d’entrée : installation neuve, VMC double flux, dépannage. L’entretien préventif fait l’objet d’une page dédiée.`,
+  lead: `BR Tech Sàrl conçoit, pose et dépanne les réseaux de ventilation depuis Renens, dans les ${site.serviceZone.display}. Installation neuve, VMC double flux et dépannage. L’entretien préventif est présenté sur la page Maintenance.`,
   live: [
     {
       title: "Installation",
@@ -88,7 +88,7 @@ export const installationPage: ServicePageContent = {
       title: "Ce que nous posons",
       answer:
         "Réseaux d’air neufs ou en rénovation : caissons, gaines, bouches d’extraction et d’insufflation, simple ou double flux selon le projet.",
-      body: "Le système suit l’usage du bâtiment et le cahier des charges : débits, chemins de gaines, accès pour l’entretien. Nous coordonnons les interfaces avec le second œuvre lorsque le planning le demande. Pour une VMC double flux comme intention principale, voir la page dédiée.",
+      body: "Le système suit l’usage du bâtiment et le cahier des charges : débits, chemins de gaines, accès pour l’entretien. Nous coordonnons les interfaces avec le second œuvre lorsque le planning le demande. La VMC double flux est décrite sur sa page.",
     },
     {
       title: "Comment ça se passe",
@@ -97,10 +97,10 @@ export const installationPage: ServicePageContent = {
       body: "Après le relevé, l’offre décrit le périmètre, les hypothèses et le planning prévisionnel. Le délai d’intervention est fixé une fois le besoin compris. Sur le chantier : pose du réseau, raccordements, contrôle des accès maintenance. À la réception : mesures de débit, schéma et PV de mise en service. Un plan d’entretien peut ensuite être proposé — voir la page maintenance.",
     },
     {
-      title: "Cadre normatif",
+      title: "Normes appliquées",
       answer:
-        "Les installations de ventilation mécanique s’inscrivent notamment dans le cadre SIA 382/1 (bases et exigences ; édition 2025, qui remplace celle de 2014), SIA 382/5:2021 pour les bâtiments d’habitation (qui remplace la SIA 2023), et SIA 180 pour la protection thermique, l’humidité et le climat intérieur.",
-      body: "Ces normes servent de cadre au projet et au cahier des charges. Nous intervenons aussi dans le cadre de projets SIA et de bâtiments Minergie lorsque le dossier le prévoit. Les exigences énergétiques cantonales s’appliquent au bâtiment selon le dossier — nous nous référons au texte du projet.",
+        "Ventilation mécanique : SIA 382/1, édition 2025 (elle remplace l’édition 2014). Habitation : SIA 382/5:2021 (elle remplace la SIA 2023). Protection thermique, humidité et climat intérieur : SIA 180.",
+      body: "Le projet et le cahier des charges s’y réfèrent. Lorsque le dossier le prévoit, l’intervention suit aussi un projet SIA ou un bâtiment Minergie. Les exigences énergétiques cantonales sont celles du dossier.",
     },
     {
       title: "Livrables",
@@ -112,7 +112,7 @@ export const installationPage: ServicePageContent = {
   faq: [
     {
       q: "Quelle norme suisse concerne la ventilation des logements ?",
-      a: "Le cadre métier cite notamment la SIA 382/1 (ventilation mécanique — bases et exigences ; édition 2025) et, pour l’habitation, la SIA 382/5:2021. L’humidité et le climat intérieur relèvent aussi de la SIA 180. Ces références cadrent le projet et le cahier des charges.",
+      a: "Ventilation mécanique : SIA 382/1 (bases et exigences, édition 2025). Habitation : SIA 382/5:2021. Humidité et climat intérieur : SIA 180. Le projet et le cahier des charges s’y réfèrent.",
     },
     {
       q: "Où intervenez-vous pour une installation ?",
@@ -177,10 +177,10 @@ export const doubleFluxPage: ServicePageContent = {
       body: "Contact, visite ou lecture du projet, offre, pose, mise en service avec mesures, puis proposition d’entretien. Le planning et le rendement attendu s’appuient sur le relevé et les mesures réelles du bâtiment.",
     },
     {
-      title: "Cadre normatif",
+      title: "Normes appliquées",
       answer:
-        "Pour l’habitation, la SIA 382/5:2021 traite de la ventilation mécanique dans les bâtiments d’habitation (elle remplace la SIA 2023). Les bases et exigences générales relèvent notamment de la SIA 382/1 (édition 2025). L’humidité et le climat intérieur s’inscrivent aussi dans la SIA 180.",
-      body: "Ces normes cadrent le projet et le cahier des charges.",
+        "Habitation : SIA 382/5:2021 (elle remplace la SIA 2023). Bases et exigences : SIA 382/1, édition 2025. Humidité et climat intérieur : SIA 180.",
+      body: "Le projet et le cahier des charges s’y réfèrent.",
     },
     {
       title: "Entretien",
@@ -200,7 +200,7 @@ export const doubleFluxPage: ServicePageContent = {
     },
     {
       q: "Quelle norme suisse s’applique à la VMC en habitation ?",
-      a: "Le cadre métier cite notamment la SIA 382/5:2021 pour la ventilation mécanique dans les bâtiments d’habitation, et la SIA 382/1 pour les bases et exigences. La SIA 180 couvre aussi humidité et climat intérieur.",
+      a: "Habitation : SIA 382/5:2021 pour la ventilation mécanique. Bases et exigences : SIA 382/1. Humidité et climat intérieur : SIA 180.",
     },
     {
       q: "À quelle fréquence entretenir une VMC en Suisse ?",

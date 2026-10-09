@@ -9,7 +9,6 @@ export const site = {
   email: "info@brtech.ch",
   phoneDisplay: "+41 79 176 38 19",
   phoneTel: "+41791763819",
-  phoneConfirmed: true,
   hours: {
     display: "Du lundi au vendredi, de 7h00 à 17h00",
     compact: "Lun.–Ven. 7h00–17h00",

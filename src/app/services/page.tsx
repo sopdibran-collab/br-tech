@@ -68,8 +68,8 @@ export default function ServicesHubPage() {
         <ContentSection muted>
           <h2 className="text-[22px] font-semibold text-navy">Maintenance</h2>
           <p className="mt-3 text-[17px] text-ink">
-            L’entretien préventif et le contrat d’entretien font l’objet d’une
-            offre dédiée.
+            L’entretien préventif et le contrat d’entretien sont présentés sur
+            la page Maintenance.
           </p>
           <p className="mt-3 text-[15px] text-ink-secondary">
             {servicesHub.maintenance.text}

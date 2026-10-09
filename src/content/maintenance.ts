@@ -40,13 +40,13 @@ export const maintenancePage: ServicePageContent = {
       title: "Processus et livrables",
       answer:
         "Planification du passage, intervention sur site, compte-rendu simple, suite éventuelle (pièces, nettoyage de conduits, reprise).",
-      body: "Pour un parc ou un immeuble, les passages et les observations restent traçables. Pour un logement, le compte-rendu reste lisible sans jargon. En cas de panne, le dépannage a sa propre page.",
+      body: "Pour un parc ou un immeuble, les passages et les observations restent traçables. Pour un logement, le compte-rendu reste court et lisible. En cas de panne, l’intervention est décrite sur la page Dépannage.",
     },
     {
-      title: "Cadre normatif",
+      title: "Normes appliquées",
       answer:
-        "Le suivi d’une installation d’habitation s’inscrit notamment dans le cadre SIA 382/5:2021 et des bases SIA 382/1 ; l’humidité et le climat intérieur relèvent aussi de la SIA 180.",
-      body: "Ces normes aident à lire débits, filtres et hygiène de réseau dans le suivi. Les exigences énergétiques cantonales concernent le bâtiment ; elles ne se substituent pas au contrat d’entretien.",
+        "Pour une installation d’habitation : SIA 382/5:2021 et SIA 382/1. Humidité et climat intérieur : SIA 180.",
+      body: "Dans le suivi, elles concernent les débits, les filtres et l’hygiène du réseau. Les exigences énergétiques cantonales portent sur le bâtiment et ne remplacent pas le contrat d’entretien.",
     },
   ],
   faq: [
