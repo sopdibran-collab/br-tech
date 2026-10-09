@@ -70,32 +70,27 @@ h3,
   box-shadow: var(--shadow-focus);
 }
 
-/* Gris échantillonnés sur le still-life hero — le visuel se fond dans le champ */
+/* Fond plat sous la photo du hero, visible le temps du chargement. */
 .hero-studio {
   background: #e5e4e6;
-  background: linear-gradient(180deg, #e7e7e9 0%, #d7d7d9 55%, #c6c4c4 100%);
-}
-
-.hero-veil {
-  background: linear-gradient(
-    90deg,
-    rgb(231 231 233 / 0.97) 0%,
-    rgb(231 231 233 / 0.88) 34%,
-    rgb(215 215 217 / 0.28) 58%,
-    rgb(215 215 217 / 0) 76%
-  );
 }
 
 @media (max-width: 767px) {
-  .hero-veil {
-    background: linear-gradient(
-      180deg,
-      rgb(231 231 233 / 0.96) 0%,
-      rgb(231 231 233 / 0.82) 42%,
-      rgb(215 215 217 / 0.28) 72%,
-      rgb(215 215 217 / 0) 100%
-    );
+  body:has([data-sticky-cta]) {
+    padding-bottom: 4rem;
   }
+}
+
+.consent-check {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.consent-check:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--brt-primary);
 }
 
 /* Voile neige pour un hero photo intérieur : le titre reste lisible à gauche. */

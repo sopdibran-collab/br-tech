@@ -19,7 +19,7 @@ export function CtaBand({
           <h2 className="text-[24px] font-semibold md:text-[32px]">{title}</h2>
           <p className="mt-2 max-w-[42ch] text-white/75">{text}</p>
         </div>
-        <ButtonLink href={href} variant="inverse">
+        <ButtonLink href={href} variant="filled">
           {label}
         </ButtonLink>
       </div>

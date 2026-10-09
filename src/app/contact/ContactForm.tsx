@@ -143,24 +143,20 @@ export function ContactForm({ defaultType }: { defaultType?: string }) {
         <FieldError id="message-error" message={errors.message} />
       </div>
 
-      <div>
-        <label className="flex items-start gap-3 text-[14px] text-ink-secondary">
-          <input
-            id="consent"
-            type="checkbox"
-            name="consent"
-            required
-            aria-invalid={errors.consent ? true : undefined}
-            aria-describedby={errors.consent ? "consent-error" : undefined}
-            className="mt-1 size-4 rounded-[2px] border-line"
-          />
-          <span>
-            {contactCopy.consent}
-            <RequiredMark />
-          </span>
-        </label>
-        <FieldError id="consent-error" message={errors.consent} />
-      </div>
+      <label className="flex items-start gap-3 text-[14px] text-ink-secondary">
+        <input
+          type="checkbox"
+          name="consent"
+          required
+          className="consent-check mt-0.5 shrink-0 rounded-[2px] border border-line accent-primary"
+        />
+        <span>
+          {contactCopy.consent}
+          {err.consent ? (
+            <span className="mt-1 block text-danger">{err.consent}</span>
+          ) : null}
+        </span>
+      </label>
 
       {errors.form ? (
         <p className="text-[14px] text-danger" role="alert">

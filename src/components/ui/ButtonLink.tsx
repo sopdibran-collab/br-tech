@@ -4,7 +4,7 @@ import { cn } from "@/lib/cn";
 type ButtonLinkProps = {
   href: string;
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "ghost" | "inverse";
+  variant?: "primary" | "secondary" | "ghost" | "inverse" | "filled";
   className?: string;
 };
 
@@ -16,6 +16,7 @@ const variants = {
   ghost: "bg-transparent text-ink border border-transparent hover:text-primary",
   inverse:
     "bg-transparent text-white border border-white/70 hover:bg-white hover:text-navy",
+  filled: "bg-white text-navy border border-white hover:bg-primary-subtle",
 };
 
 export function ButtonLink({

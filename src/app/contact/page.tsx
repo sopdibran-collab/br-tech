@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/app/contact/ContactForm";
+import { MapEmbed } from "@/components/contact/MapEmbed";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbNode, organizationNode } from "@/components/seo/schema";
@@ -74,29 +75,12 @@ export default async function ContactPage({
               Horaires : {site.hours.display}.
             </p>
           </div>
-          <figure className="mt-6">
-            <div className="overflow-hidden rounded-[4px] border border-line bg-white">
-              <iframe
-                src={MAP_EMBED_SRC}
-                title={`Carte : ${site.legalName}, ${site.address.street}, ${site.address.postalCode} ${site.address.city}`}
-                className="block h-[400px] w-full border-0"
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
-            <figcaption className="mt-3 text-[14px]">
-              <a
-                href={MAP_LINK_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline"
-              >
-                Ouvrir dans Google Maps
-                <span className="sr-only"> (nouvel onglet)</span>
-              </a>
-            </figcaption>
-          </figure>
+          <MapEmbed
+            src={MAP_EMBED_SRC}
+            title={`Carte : ${site.legalName}, ${site.address.street}, ${site.address.postalCode} ${site.address.city}`}
+            linkHref={MAP_LINK_HREF}
+            address={address}
+          />
         </aside>
       </div>
     </div>

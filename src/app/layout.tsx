@@ -10,8 +10,10 @@ import "./globals.css";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["600"],
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -19,6 +21,8 @@ const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -26,6 +30,8 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
   display: "swap",
+  preload: false,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -77,7 +83,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="fr-CH"
       className={`${outfit.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-surface-page text-ink pb-16 md:pb-0">
+      <body className="min-h-full flex flex-col bg-surface-page text-ink">
         <SkipLink />
         <SiteHeader />
         <main id="contenu" className="flex-1">
