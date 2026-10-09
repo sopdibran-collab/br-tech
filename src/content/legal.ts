@@ -7,7 +7,7 @@ export const mentions = {
     "Mentions légales de BR Tech Sàrl, Rue de Lausanne 49g, 1020 Renens. Ventilation en Suisse romande. Hébergement Vercel, domaine et messagerie Infomaniak.",
   paragraphs: [
     `${site.legalName}, ${formatAddress()}, ${site.address.countryName}.`,
-    `E-mail : ${site.email}. Téléphone : ${site.phoneDisplay}${site.phoneConfirmed ? "" : " (à confirmer)."}.`,
+    `E-mail : ${site.email}. Téléphone : ${site.phoneDisplay}.`,
     "Le site présente les prestations de ventilation de l’entreprise. Aucune information n’est fournie à titre de conseil juridique ou normatif opposable.",
     "Hébergement du site : Vercel. Nom de domaine et messagerie : Infomaniak.",
   ],

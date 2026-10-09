@@ -36,10 +36,10 @@ export const depannagePage: ServicePageContent = {
       body: `Siège à Renens (${site.address.street}, ${site.address.postalCode}). Zone d’intervention : ${site.serviceZone.display}.`,
     },
     {
-      title: "Cadre normatif",
+      title: "Normes appliquées",
       answer:
-        "Le diagnostic et la remise en service s’inscrivent dans le même cadre métier que l’installation : SIA 382/1 (bases et exigences), SIA 382/5:2021 pour l’habitation, SIA 180 pour humidité et climat intérieur.",
-      body: "Ces références aident à lire débits, hygiène de réseau et confort lors du diagnostic et de la remise en service.",
+        "Les mêmes normes que pour une installation : SIA 382/1 (bases et exigences), SIA 382/5:2021 pour l’habitation, SIA 180 pour l’humidité et le climat intérieur.",
+      body: "Au diagnostic et à la remise en service, elles concernent les débits, l’hygiène du réseau et le confort.",
     },
     {
       title: "Après la panne",

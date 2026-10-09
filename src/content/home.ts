@@ -72,7 +72,7 @@ export const home = {
   },
   method: {
     title: "Du contact à l’entretien",
-    lead: "Une affaire se tient dans cet ordre.",
+    lead: "L’intervention suit ces six étapes.",
     steps: [
       {
         title: "Contact",

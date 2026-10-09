@@ -47,7 +47,7 @@ export default function HomePage() {
       <section className="hero-studio relative min-h-[calc(100vh-4rem)] overflow-hidden md:min-h-[calc(100vh-72px)]">
         <Image
           src={heroPhoto}
-          alt="Bouche de ventilation et plume immobile — visuel conceptuel, l’air calme"
+          alt="Bouche de ventilation et plume immobile"
           fill
           priority
           placeholder="blur"
