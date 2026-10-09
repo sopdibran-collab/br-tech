@@ -2,26 +2,12 @@
 
 import { redirect } from "next/navigation";
 import { Resend } from "resend";
-import { z } from "zod";
 import { projectTypes, site } from "@/config/site";
-
-const schema = z.object({
-  name: z.string().trim().min(2, "Indiquez votre nom."),
-  company: z.string().trim().optional(),
-  phone: z.string().trim().min(8, "Indiquez un numéro de téléphone."),
-  email: z.string().trim().email("Indiquez un e-mail valide."),
-  projectType: z.string().trim().min(1, "Choisissez un type de projet."),
-  location: z.string().trim().optional(),
-  message: z.string().trim().min(10, "Précisez le besoin (quelques lignes)."),
-  consent: z
-    .boolean()
-    .refine((value) => value === true, "Le consentement est requis."),
-  website: z.string().optional(),
-});
+import { contactErrors, contactSchema, type ContactErrors } from "@/app/contact/schema";
 
 export type ContactState = {
   ok: boolean;
-  errors?: Record<string, string>;
+  errors?: ContactErrors;
 };
 
 const hits = new Map<string, { n: number; t: number }>();
@@ -68,14 +54,9 @@ export async function submitContact(
     return { ok: true };
   }
 
-  const parsed = schema.safeParse(raw);
+  const parsed = contactSchema.safeParse(raw);
   if (!parsed.success) {
-    const errors: Record<string, string> = {};
-    for (const issue of parsed.error.issues) {
-      const key = String(issue.path[0] ?? "form");
-      if (!errors[key]) errors[key] = issue.message;
-    }
-    return { ok: false, errors };
+    return { ok: false, errors: contactErrors(parsed.error) };
   }
 
   if (rateLimited(parsed.data.email)) {
@@ -95,7 +76,7 @@ export async function submitContact(
     return {
       ok: false,
       errors: {
-        form: "L’envoi e-mail n’est pas configuré pour le moment. Écrivez-nous à info@brtech.ch ou appelez-nous.",
+        form: `Le formulaire n’a pas pu être envoyé. Appelez le ${site.phoneDisplay} ou écrivez à ${site.email}.`,
       },
     };
   }
