@@ -24,7 +24,7 @@ export const home = {
   ],
   why: {
     title: "L’expertise ventilation",
-    lead: "Spécialistes ventilation — un lot air documenté, calé sur le bâtiment et le planning.",
+    lead: "Spécialistes ventilation — une installation documentée, calée sur le bâtiment et le planning.",
     items: [
       {
         title: "Installation documentée",
@@ -120,8 +120,8 @@ export const home = {
     title: "Questions fréquentes",
     items: [
       {
-        q: "Vous êtes ventiliste ou CVC généraliste ?",
-        a: "Ventiliste. Installation, rénovation et entretien de réseaux d’air. Offre limitée à la ventilation.",
+        q: "Quel est votre métier ?",
+        a: "Ventiliste. Installation, rénovation et entretien de réseaux d’air.",
       },
       {
         q: "Où intervenez-vous ?",

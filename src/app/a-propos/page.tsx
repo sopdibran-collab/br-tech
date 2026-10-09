@@ -8,7 +8,8 @@ import hallPhoto from "../../../assets/photos/halle-gaines.jpg";
 
 export const metadata: Metadata = pageMeta({
   title: about.title,
-  description: about.description,
+  description:
+    "BR Tech Sàrl, ventilation à Renens (VD). Équipe de spécialistes en Suisse romande, installations calées sur le bâtiment et le cahier des charges.",
   path: about.path,
 });
 
@@ -23,7 +24,7 @@ export default function AboutPage() {
           { label: "Accueil", href: "/" },
           { label: "À propos" },
         ]}
-        title={about.title}
+        title="À propos — ventilation à Renens"
       />
       <ContentSection>
         <div className="space-y-5 text-[16px] leading-relaxed text-ink-secondary md:text-[17px]">
