@@ -2,7 +2,8 @@ import { site } from "@/config/site";
 
 export const home = {
   hero: {
-    h1: "L’air, maîtrisé.",
+    eyebrow: site.signature,
+    h1: "Ventilation à Renens et en Suisse romande",
     sub: "Spécialistes ventilation · Suisse romande",
   },
   audiences: [
