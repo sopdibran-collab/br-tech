@@ -1,4 +1,29 @@
+import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+
+const notFoundDescription =
+  "Cette page n’existe pas. BR Tech Sàrl, ventilation à Renens et en Suisse romande.";
+
+export const metadata: Metadata = {
+  title: "Page introuvable",
+  description: notFoundDescription,
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
+  openGraph: {
+    title: "Page introuvable — BR Tech Sàrl",
+    description: notFoundDescription,
+  },
+  twitter: {
+    title: "Page introuvable — BR Tech Sàrl",
+    description: notFoundDescription,
+  },
+};
 
 export default function NotFound() {
   return (

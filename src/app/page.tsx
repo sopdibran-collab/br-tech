@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqNode, organizationNode } from "@/components/seo/schema";
-import { cta } from "@/config/site";
+import { cta, site } from "@/config/site";
 import { home } from "@/content/home";
 import heroPhoto from "../../public/images/hero.webp";
 
@@ -55,12 +55,18 @@ export default function HomePage() {
           className="object-cover object-[62%_42%] md:object-[72%_48%]"
         />
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-[1200px] flex-col justify-center px-5 py-16 md:min-h-[calc(100vh-72px)] md:px-8">
-          <h1 className="max-w-[16ch] font-display text-[36px] font-semibold tracking-tight text-navy sm:text-[48px] lg:text-[56px] lg:leading-[1.12]">
+          <p className="text-[13px] font-medium tracking-wide text-navy">
+            {home.hero.eyebrow}
+          </p>
+          <h1 className="mt-3 max-w-[22ch] font-display text-[36px] font-semibold tracking-tight text-navy sm:text-[48px] lg:text-[56px] lg:leading-[1.12]">
             {home.hero.h1}
           </h1>
           <p className="mt-4 max-w-[36ch] text-lg text-ink">{home.hero.sub}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <ButtonLink href={cta.primary.href}>{cta.primary.label}</ButtonLink>
+            <ButtonLink href={`tel:${site.phoneTel}`} variant="secondary">
+              Appeler le {site.phoneDisplay}
+            </ButtonLink>
             <ButtonLink href={cta.secondary.href} variant="secondary">
               {cta.secondary.label}
             </ButtonLink>

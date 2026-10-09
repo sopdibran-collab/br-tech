@@ -5,7 +5,7 @@ export const depannagePage: ServicePageContent = {
   path: "/services/depannage",
   title: "Dépannage ventilation Renens",
   description:
-    "Dépannage de ventilation à Renens : diagnostic et remise en service du réseau d’air. BR Tech Sàrl.",
+    "Dépannage de ventilation à Renens : diagnostic et remise en service du réseau d’air. BR Tech Sàrl intervient depuis la rue de Lausanne, en Suisse romande.",
   h1: "Dépannage de ventilation à Renens",
   lead: `BR Tech Sàrl intervient sur les pannes de ventilation depuis son siège à Renens (${site.address.street}). Diagnostic, réparation de conduits et bouches, remise en service du réseau d’air. Le délai d’intervention est fixé après le diagnostic. Zone : ${site.serviceZone.display}.`,
   serviceName: "Dépannage de ventilation",
@@ -28,7 +28,7 @@ export const depannagePage: ServicePageContent = {
       title: "Ce que nous faisons",
       answer:
         "Relevé sur place, identification de la cause, réparation ciblée des conduits ou bouches, ou préconisation de remplacement, puis remise en service du réseau d’air.",
-      body: "Selon l’état du caisson, des bouches et des gaines, l’intervention reste un dépannage ou bascule vers une rénovation aéraulique. L’offre le dit clairement. Livrables typiques : constat, actions réalisées, observations utiles pour la suite (entretien ou reprise). Nous ne traitons pas le chauffage, la climatisation ni la plomberie.",
+      body: "Selon l’état du caisson, des bouches et des gaines, l’intervention reste un dépannage ou bascule vers une rénovation aéraulique. Vous recevez un constat, les actions réalisées et des observations utiles pour la suite (entretien ou reprise).",
     },
     {
       title: "Renens et zone d’intervention",
@@ -36,7 +36,7 @@ export const depannagePage: ServicePageContent = {
       body: `Siège à Renens (${site.address.street}, ${site.address.postalCode}). Zone d’intervention : ${site.serviceZone.display}.`,
     },
     {
-      title: "Cadre normatif (référence métier)",
+      title: "Cadre normatif",
       answer:
         "Le diagnostic et la remise en service s’inscrivent dans le même cadre métier que l’installation : SIA 382/1 (bases et exigences), SIA 382/5:2021 pour l’habitation, SIA 180 pour humidité et climat intérieur.",
       body: "Ces références aident à lire débits, hygiène de réseau et confort lors du diagnostic et de la remise en service.",
@@ -45,7 +45,7 @@ export const depannagePage: ServicePageContent = {
       title: "Après la panne",
       answer:
         "Un contrat d’entretien limite les pannes répétées liées aux filtres, aux débits et à l’hygiène de réseau.",
-      body: "Après le dépannage, un entretien régulier peut limiter les pannes liées aux filtres et aux débits. Voir l’offre maintenance.",
+      body: "Après le dépannage, un entretien régulier peut limiter les pannes liées aux filtres et aux débits. Voir la page maintenance.",
     },
   ],
   faq: [
