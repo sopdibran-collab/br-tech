@@ -7,7 +7,7 @@ export const maintenancePage: ServicePageContent = {
   description:
     "Entretien et contrat de VMC à Renens et en Suisse romande. BR Tech Sàrl : filtres, débits, hygiène des réseaux et nettoyage de conduits selon le contrat.",
   h1: "Maintenance et entretien de VMC",
-  lead: `La performance d’une VMC (débits, filtres, hygiène des réseaux) se tient par un suivi. BR Tech Sàrl propose l’entretien et le contrat depuis Renens, dans les ${site.serviceZone.display}.`,
+  lead: `La performance d’une VMC (débits, filtres, hygiène des réseaux) se tient par un suivi. BR Tech Sàrl propose l’entretien et le contrat dans les ${site.serviceZone.display}.`,
   serviceName: "Maintenance et entretien de VMC",
   contactType: "maintenance",
   includeLausanne: true,

@@ -6,12 +6,12 @@ export const servicesHub = {
   description:
     "Installation, VMC double flux et dépannage de ventilation à Renens et en Suisse romande. BR Tech Sàrl : entretien préventif et contrats de maintenance.",
   h1: "Installation, double flux et dépannage",
-  lead: `BR Tech Sàrl conçoit, pose et dépanne les réseaux de ventilation depuis Renens, dans les ${site.serviceZone.display}. Installation neuve, VMC double flux et dépannage. L’entretien préventif est présenté sur la page Maintenance.`,
+  lead: `BR Tech Sàrl conçoit, pose et dépanne les réseaux de ventilation dans les ${site.serviceZone.display}. Installation neuve, VMC double flux et dépannage. L’entretien préventif est présenté sur la page Maintenance.`,
   live: [
     {
       title: "Installation",
       href: "/services/installation",
-      text: "Réseaux neufs, calage sur le cahier des charges, pose de gaines et bouches, mise en service mesurée — depuis Renens.",
+      text: "Réseaux neufs, calage sur le cahier des charges, pose de gaines et bouches, mise en service mesurée.",
       icon: "flow",
     },
     {
@@ -73,7 +73,7 @@ export const installationPage: ServicePageContent = {
   description:
     "Installation de ventilation à Renens et en Suisse romande. BR Tech Sàrl : relevé, pose, mise en service mesurée. Devis après visite technique.",
   h1: "Installation de ventilation à Renens et en Suisse romande",
-  lead: `BR Tech Sàrl installe des systèmes de ventilation depuis Renens, dans les ${site.serviceZone.display} : relevé, calage sur le cahier des charges, pose de gaines et bouches, mise en service mesurée. Particuliers, immeubles, tertiaire et industrie. Le devis suit la visite technique.`,
+  lead: `BR Tech Sàrl installe des systèmes de ventilation dans les ${site.serviceZone.display} : relevé, calage sur le cahier des charges, pose de gaines et bouches, mise en service mesurée. Particuliers, immeubles, tertiaire et industrie. Le devis suit la visite technique.`,
   serviceName: "Installation de ventilation",
   contactType: "installation",
   includeLausanne: true,
@@ -106,7 +106,7 @@ export const installationPage: ServicePageContent = {
       title: "Livrables",
       answer:
         "Mesures de débit, schéma, PV de mise en service, chantier rangé, proposition de plan d’entretien.",
-      body: `Vous disposez d’une trace écrite des réglages et du périmètre réalisé. Notre siège à Renens (${formatAddressInline()}) ancre l’intervention dans la zone.`,
+      body: "Vous disposez d’une trace écrite des réglages et du périmètre réalisé.",
     },
   ],
   faq: [
@@ -116,7 +116,7 @@ export const installationPage: ServicePageContent = {
     },
     {
       q: "Où intervenez-vous pour une installation ?",
-      a: `Depuis Renens, dans les ${site.serviceZone.display}.`,
+      a: `Dans les ${site.serviceZone.display}.`,
     },
     {
       q: "Une régie ou un immeuble peut-il demander un devis ventilation ?",
@@ -131,17 +131,13 @@ export const installationPage: ServicePageContent = {
   ],
 };
 
-function formatAddressInline() {
-  return `${site.address.street}, ${site.address.postalCode}`;
-}
-
 export const doubleFluxPage: ServicePageContent = {
   path: "/services/double-flux",
   title: "VMC double flux Suisse romande",
   description:
     "Installation de VMC double flux à Renens et en Suisse romande. BR Tech Sàrl : insufflation, extraction et récupération de chaleur selon le bâtiment.",
   h1: "VMC double flux en Suisse romande",
-  lead: `Une VMC double flux insuffle et extrait l’air, en général avec récupération de chaleur. BR Tech Sàrl l’installe depuis Renens, dans les ${site.serviceZone.display}, pour le logement, l’immeuble et le tertiaire. Le gain énergétique dépend du bâtiment et de la pose.`,
+  lead: `Une VMC double flux insuffle et extrait l’air, en général avec récupération de chaleur. BR Tech Sàrl l’installe dans les ${site.serviceZone.display}, pour le logement, l’immeuble et le tertiaire. Le gain énergétique dépend du bâtiment et de la pose.`,
   serviceName: "Installation de VMC double flux",
   contactType: "double-flux",
   includeLausanne: true,
@@ -168,7 +164,7 @@ export const doubleFluxPage: ServicePageContent = {
       title: "Pour quel bâtiment",
       answer:
         "Logement étanche, immeuble, petits tertiaires : le dimensionnement suit l’usage et les locaux.",
-      body: `Villa, copropriété ou bureaux : les débits, le caisson et les réseaux se calent sur les volumes, les chemins de gaines et l’accès entretien. Zone d’intervention : ${site.serviceZone.display}, depuis Renens.`,
+      body: `Villa, copropriété ou bureaux : les débits, le caisson et les réseaux se calent sur les volumes, les chemins de gaines et l’accès entretien. Zone d’intervention : ${site.serviceZone.display}.`,
     },
     {
       title: "Pose, mise en service et livrables",
