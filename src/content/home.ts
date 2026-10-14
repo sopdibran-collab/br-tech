@@ -125,7 +125,7 @@ export const home = {
       },
       {
         q: "Où intervenez-vous ?",
-        a: `BR Tech Sàrl a son siège à Renens (VD), ${site.address.street}, ${site.address.postalCode}, et intervient dans les ${site.serviceZone.display}.`,
+        a: `Basée à Renens (VD), BR Tech Sàrl intervient dans les ${site.serviceZone.display}.`,
       },
       {
         q: "Quelle est la différence entre simple flux et double flux ?",

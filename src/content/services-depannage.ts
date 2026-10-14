@@ -7,7 +7,7 @@ export const depannagePage: ServicePageContent = {
   description:
     "Dépannage de ventilation à Renens : diagnostic et remise en service du réseau d’air. BR Tech Sàrl intervient depuis la rue de Lausanne, en Suisse romande.",
   h1: "Dépannage de ventilation à Renens",
-  lead: `BR Tech Sàrl intervient sur les pannes de ventilation depuis son siège à Renens (${site.address.street}). Diagnostic, réparation de conduits et bouches, remise en service du réseau d’air. Le délai d’intervention est fixé après le diagnostic. Zone : ${site.serviceZone.display}.`,
+  lead: `BR Tech Sàrl intervient sur les pannes de ventilation. Diagnostic, réparation de conduits et bouches, remise en service du réseau d’air. Le délai d’intervention est fixé après le diagnostic. Zone : ${site.serviceZone.display}.`,
   serviceName: "Dépannage de ventilation",
   contactType: "depannage",
   includeLausanne: true,
@@ -32,8 +32,8 @@ export const depannagePage: ServicePageContent = {
     },
     {
       title: "Renens et zone d’intervention",
-      answer: `BR Tech Sàrl a son siège à Renens (VD), ${site.address.street}, ${site.address.postalCode}, et intervient dans les ${site.serviceZone.display}.`,
-      body: `Siège à Renens (${site.address.street}, ${site.address.postalCode}). Zone d’intervention : ${site.serviceZone.display}.`,
+      answer: `BR Tech Sàrl intervient dans les ${site.serviceZone.display}.`,
+      body: `Zone d’intervention : ${site.serviceZone.display}.`,
     },
     {
       title: "Normes appliquées",
@@ -54,8 +54,8 @@ export const depannagePage: ServicePageContent = {
       a: "L’air vicié (CO₂, odeurs, humidité) se traite par un renouvellement d’air mécanique adapté et un entretien (filtres, bouches), pas seulement par une aération ponctuelle.",
     },
     {
-      q: "Qui intervient à Renens ?",
-      a: `BR Tech Sàrl a son siège à Renens (VD), ${site.address.street}, ${site.address.postalCode}, et intervient dans les ${site.serviceZone.display}.`,
+      q: "Où intervenez-vous pour un dépannage ?",
+      a: `BR Tech Sàrl intervient dans les ${site.serviceZone.display}.`,
     },
     {
       q: "L’humidité dans un appartement vient-elle d’un défaut de ventilation ?",
