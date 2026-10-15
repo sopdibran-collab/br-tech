@@ -5,7 +5,8 @@
 - **Raison sociale** : BR Tech Sàrl
 - **Fondée en** : non fourni — ne pas inventer
 - **Forme juridique** : Sàrl
-- **Effectif** : non fourni
+- **Effectif** : six personnes qualifiées ; plus de dix ans d’expérience du métier (validé par le propriétaire)
+- **Taille des chantiers** : petite et moyenne taille (validé par le propriétaire)
 - **Siège / zones d'intervention** : Rue de Lausanne 49g, 1020 Renens VD — Suisse romande / arc lémanique (pages locales seulement si zone réelle)
 - **Téléphone** : +41 79 176 38 19
 - **Horaires** : du lundi au vendredi, de 7h00 à 17h00

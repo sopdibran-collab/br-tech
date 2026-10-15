@@ -10,6 +10,8 @@ export const profile = {
       "L’intervention suit six étapes : contact, visite, offre, pose, mise en service, entretien. Le devis suit la visite technique lorsque le bâtiment doit être vu.",
     services:
       "Ce déroulement couvre l’installation, la VMC double flux, le simple flux et l’extraction, la rénovation d’un réseau d’air, le dépannage, l’entretien et le contrat, la pose de gaines et de bouches, le nettoyage de conduits, la réparation de conduits et de bouches, ainsi que l’étude et les plans. Le planning est annoncé, et les interfaces avec les autres lots sont coordonnées. L’entretien porte ensuite sur les filtres, les débits et l’hygiène du réseau, selon le contrat.",
+    team:
+      "Six personnes qualifiées prennent en charge les questions techniques de vos chantiers de petite et de moyenne taille. Elles exercent ce métier depuis plus de dix ans.",
   },
   clients: {
     title: "Interlocuteurs",
