@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ProfileSections } from "@/components/content/ProfileSections";
 import { BrandIcon } from "@/components/icons/BrandIcon";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { CtaBand } from "@/components/layout/CtaBand";
@@ -175,6 +176,7 @@ export default function HomePage() {
           {home.team.title}
         </h2>
         <p className="mt-4 max-w-[48ch] text-[17px] text-ink-secondary">{home.team.lead}</p>
+        <ProfileSections surface="inset" />
         <p className="mt-6">
           <Link
             href={home.team.href}

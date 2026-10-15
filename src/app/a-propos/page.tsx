@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ProfileSections } from "@/components/content/ProfileSections";
 import { about } from "@/content/about";
 import { pageMeta } from "@/lib/page-meta";
 import { CtaBand } from "@/components/layout/CtaBand";
@@ -33,6 +34,7 @@ export default function AboutPage() {
           ))}
         </div>
       </ContentSection>
+      <ProfileSections surface="page" />
       <CtaBand title={about.band.title} text={about.band.text} />
     </>
   );
