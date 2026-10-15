@@ -40,6 +40,7 @@ function ProcessBody({ steps }: { steps: boolean }) {
         <p>{profile.process.compact}</p>
       )}
       <p>{profile.process.services}</p>
+      <p>{profile.process.team}</p>
     </div>
   );
 }
