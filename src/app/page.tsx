@@ -65,16 +65,20 @@ export default function HomePage() {
             <h1 className="mt-3 font-display text-[34px] font-semibold tracking-tight text-[#1B3147] sm:text-[42px] lg:text-[48px] lg:leading-[1.12]">
               {home.hero.h1}
             </h1>
-            <p className="mt-4 text-lg text-ink">{home.hero.sub}</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href={cta.primary.href}>{cta.primary.label}</ButtonLink>
               <ButtonLink href={`tel:${site.phoneTel}`} variant="secondary">
                 Appeler le {site.phoneDisplay}
               </ButtonLink>
-              <ButtonLink href={cta.secondary.href} variant="secondary">
-                {cta.secondary.label}
-              </ButtonLink>
             </div>
+            <p className="mt-3">
+              <Link
+                href={cta.secondary.href}
+                className="tap text-[15px] font-medium text-primary underline underline-offset-4 hover:text-primary-hover"
+              >
+                {cta.secondary.label}
+              </Link>
+            </p>
           </div>
         </div>
       </section>
