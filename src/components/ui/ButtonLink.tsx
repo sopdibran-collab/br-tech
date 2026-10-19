@@ -12,7 +12,7 @@ const variants = {
   primary:
     "bg-primary text-white hover:bg-primary-hover border border-transparent",
   secondary:
-    "bg-white text-primary border border-primary hover:bg-primary-subtle",
+    "bg-transparent text-primary border border-primary hover:bg-primary-subtle",
   ghost: "bg-transparent text-ink border border-transparent hover:text-primary",
   inverse:
     "bg-transparent text-white border border-white/70 hover:bg-white hover:text-navy",

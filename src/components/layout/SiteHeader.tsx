@@ -63,7 +63,7 @@ function DrawerLinks({
     <div>
       <Link
         href={item.href}
-        className="block px-3 py-2 text-[15px] font-medium text-ink hover:bg-surface-muted"
+        className="flex min-h-[44px] items-center px-3 text-[15px] font-medium text-ink hover:bg-surface-muted"
         onClick={onNavigate}
       >
         {item.label}
@@ -74,7 +74,7 @@ function DrawerLinks({
             <li key={child.href}>
               <Link
                 href={child.href}
-                className="block px-3 py-1.5 text-[14px] text-ink-secondary hover:bg-surface-muted hover:text-primary"
+                className="flex min-h-[44px] items-center px-3 text-[14px] text-ink-secondary hover:bg-surface-muted hover:text-primary"
                 onClick={onNavigate}
               >
                 {child.label}
@@ -128,14 +128,14 @@ export function SiteHeader() {
         <div className="flex items-center gap-2 sm:gap-3">
           <a
             href={cta.call.href}
-            className="hidden items-center gap-2 text-[14px] font-medium text-ink hover:text-primary md:inline-flex"
+            className="hidden min-h-[44px] items-center gap-2 px-1 text-[14px] font-medium text-ink hover:text-primary md:inline-flex"
           >
             <Phone className="size-4" strokeWidth={1.75} aria-hidden />
             {site.phoneDisplay}
           </a>
           <a
             href={cta.call.href}
-            className="inline-flex size-10 items-center justify-center text-ink md:hidden"
+            className="inline-flex size-11 items-center justify-center text-ink md:hidden"
             aria-label={`Appeler ${site.phoneDisplay}`}
           >
             <Phone className="size-[18px]" strokeWidth={1.75} />
@@ -149,7 +149,7 @@ export function SiteHeader() {
           </ButtonLink>
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center lg:hidden"
+            className="inline-flex size-11 items-center justify-center lg:hidden"
             aria-expanded={open}
             aria-controls={drawerId}
             onClick={() => setOpen(true)}
@@ -181,14 +181,14 @@ export function SiteHeader() {
               <span className="text-[15px] font-medium text-navy">Menu</span>
               <button
                 type="button"
-                className="inline-flex size-10 items-center justify-center"
+                className="inline-flex size-11 items-center justify-center"
                 onClick={() => setOpen(false)}
               >
                 <span className="sr-only">Fermer</span>
                 <X className="size-4" strokeWidth={1.75} />
               </button>
             </div>
-            <nav className="flex flex-col gap-1 overflow-y-auto p-3">
+            <nav className="flex flex-col gap-2 overflow-y-auto p-3">
               {navigationRoutes.map((item) => (
                 <DrawerLinks
                   key={item.href + item.label}

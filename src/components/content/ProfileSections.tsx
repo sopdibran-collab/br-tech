@@ -1,9 +1,35 @@
+import { BookOpen, Building2, ClipboardList } from "lucide-react";
 import { ContentSection } from "@/components/layout/ContentSection";
 import { home } from "@/content/home";
 import { profile } from "@/content/profile";
 
-const prose =
-  "space-y-4 text-[16px] leading-relaxed text-ink-secondary md:text-[17px]";
+const prose = "prose-brt space-y-4";
+
+const cardIcons = {
+  clipboard: ClipboardList,
+  book: BookOpen,
+  building: Building2,
+} as const;
+
+function FrameworkCards() {
+  return (
+    <ul className="mt-6 grid gap-4 sm:grid-cols-3">
+      {profile.frameworks.cards.map((card) => {
+        const Icon = cardIcons[card.icon];
+        return (
+          <li
+            key={card.title}
+            className="rounded-[8px] border border-line bg-white p-5"
+          >
+            <Icon className="size-5 text-primary" strokeWidth={1.75} aria-hidden />
+            <h3 className="mt-3 text-[17px] font-semibold text-navy">{card.title}</h3>
+            <p className="mt-2 text-[16px] leading-[1.6] text-[#334155]">{card.text}</p>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
 
 function Heading({
   level,
@@ -39,8 +65,14 @@ function ProcessBody({ steps }: { steps: boolean }) {
       ) : (
         <p>{profile.process.compact}</p>
       )}
-      <p>{profile.process.services}</p>
-      <p>{profile.process.team}</p>
+      <p>{profile.process.servicesIntro}</p>
+      <ul className="list-disc space-y-1 pl-5">
+        {profile.process.servicesList.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+      <p>{profile.process.servicesAfter}</p>
+      <p className="callout-brt">{profile.process.team}</p>
     </div>
   );
 }
@@ -85,7 +117,7 @@ export function ProfileSections({ surface }: { surface: "page" | "inset" }) {
         <Paragraphs items={profile.clients.paragraphs} />
       </Block>
       <Block title={profile.frameworks.title} level={level}>
-        <Paragraphs items={profile.frameworks.paragraphs} />
+        <FrameworkCards />
       </Block>
       <Block title={profile.area.title} level={level}>
         <Paragraphs items={profile.area.paragraphs} />
@@ -94,7 +126,7 @@ export function ProfileSections({ surface }: { surface: "page" | "inset" }) {
   );
 
   if (surface === "inset") {
-    return <div className="mt-10 max-w-[40rem] space-y-10">{blocks}</div>;
+    return <div className="mt-10 max-w-[68ch] space-y-10">{blocks}</div>;
   }
 
   return (
@@ -111,7 +143,7 @@ export function ProfileSections({ surface }: { surface: "page" | "inset" }) {
       </ContentSection>
       <ContentSection muted>
         <Block title={profile.frameworks.title} level="h2">
-          <Paragraphs items={profile.frameworks.paragraphs} />
+          <FrameworkCards />
         </Block>
       </ContentSection>
       <ContentSection>
