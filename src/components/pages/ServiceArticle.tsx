@@ -13,6 +13,16 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { cta } from "@/config/site";
 import type { ServicePageContent } from "@/content/types";
 
+/** Découpe un long bloc en paragraphes de deux phrases au plus (mots inchangés). */
+function splitBody(body: string): string[] {
+  const sentences = body.match(/[^.!?]+[.!?]+(\s|$)/g) ?? [body];
+  const chunks: string[] = [];
+  for (let i = 0; i < sentences.length; i += 2) {
+    chunks.push(sentences.slice(i, i + 2).join("").trim());
+  }
+  return chunks;
+}
+
 export function ServiceArticle({
   content,
   crumbs,
@@ -55,7 +65,7 @@ export function ServiceArticle({
           <h1 className="font-display text-[32px] font-semibold tracking-tight text-navy md:text-[40px]">
             {content.h1}
           </h1>
-          <p className="mt-5 text-[17px] text-ink">{content.lead}</p>
+          <p className="prose-brt mt-5 text-ink">{content.lead}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             {isDepannage ? (
               <>
@@ -89,7 +99,7 @@ export function ServiceArticle({
               <p className="mt-1 text-[13px] text-ink-secondary">
                 Promoteurs · architectes · régies
               </p>
-              <p className="mt-3 text-[15px] text-ink-secondary">
+              <p className="mt-3 text-[17px] text-ink-secondary">
                 {content.audience.professionals}
               </p>
             </div>
@@ -97,7 +107,7 @@ export function ServiceArticle({
               <h3 className="text-[15px] font-semibold text-navy">
                 Particuliers
               </h3>
-              <p className="mt-3 text-[15px] text-ink-secondary">
+              <p className="mt-3 text-[17px] text-ink-secondary">
                 {content.audience.individuals}
               </p>
             </div>
@@ -109,8 +119,12 @@ export function ServiceArticle({
             <h2 className="text-[22px] font-semibold text-navy md:text-[24px]">
               {section.title}
             </h2>
-            <p className="mt-3 text-[17px] text-ink">{section.answer}</p>
-            <p className="mt-3 text-[15px] text-ink-secondary">{section.body}</p>
+            <p className="prose-brt mt-3 font-medium">{section.answer}</p>
+            <div className="prose-brt mt-3 space-y-3">
+              {splitBody(section.body).map((chunk) => (
+                <p key={chunk.slice(0, 40)}>{chunk}</p>
+              ))}
+            </div>
           </ContentSection>
         ))}
 
@@ -124,7 +138,7 @@ export function ServiceArticle({
                 <summary className="cursor-pointer list-none text-[17px] font-medium text-navy marker:content-none [&::-webkit-details-marker]:hidden">
                   {item.q}
                 </summary>
-                <p className="mt-3 text-[15px] text-ink-secondary">{item.a}</p>
+                <p className="mt-3 text-[17px] text-ink-secondary">{item.a}</p>
               </details>
             ))}
           </div>
@@ -138,7 +152,7 @@ export function ServiceArticle({
                 const external =
                   item.href.startsWith("tel:") || item.href.startsWith("mailto:");
                 const className =
-                  "text-[15px] text-primary hover:text-primary-hover";
+                  "tap text-[15px] text-primary hover:text-primary-hover";
                 return (
                   <li key={item.href}>
                     {external ? (

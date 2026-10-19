@@ -28,10 +28,15 @@ export default function AboutPage() {
         title="À propos — ventilation à Renens"
       />
       <ContentSection>
-        <div className="space-y-5 text-[16px] leading-relaxed text-ink-secondary md:text-[17px]">
-          {about.paragraphs.map((p) => (
-            <p key={p.slice(0, 48)}>{p}</p>
-          ))}
+        <div className="prose-brt space-y-5">
+          <h2 className="text-[22px] font-semibold text-navy">L’entreprise</h2>
+          <p>{about.paragraphs[0]}</p>
+          <p>{about.paragraphs[1]}</p>
+          <h3 className="pt-2 text-[18px] font-semibold text-navy">
+            Suivi et interventions
+          </h3>
+          <p className="callout-brt">{about.paragraphs[2]}</p>
+          <p>{about.paragraphs[3]}</p>
         </div>
       </ContentSection>
       <ProfileSections surface="page" />

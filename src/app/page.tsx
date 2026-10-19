@@ -45,32 +45,40 @@ export default function HomePage() {
   return (
     <>
       <JsonLd graph={[organizationNode(), faqNode(home.faq.items)]} />
-      <section className="hero-studio relative min-h-[calc(100vh-4rem)] overflow-hidden md:min-h-[calc(100vh-72px)]">
-        <Image
-          src={heroPhoto}
-          alt="Bouche de ventilation et plume immobile"
-          fill
-          priority
-          placeholder="blur"
-          sizes="(max-width: 768px) 100vw, 1536px"
-          className="object-cover object-[62%_42%] md:object-[72%_48%]"
-        />
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-[1200px] flex-col justify-center px-5 py-16 md:min-h-[calc(100vh-72px)] md:px-8">
-          <p className="text-[13px] font-medium tracking-wide text-navy">
-            {home.hero.eyebrow}
-          </p>
-          <h1 className="mt-3 max-w-[22ch] font-display text-[36px] font-semibold tracking-tight text-navy sm:text-[48px] lg:text-[56px] lg:leading-[1.12]">
-            {home.hero.h1}
-          </h1>
-          <p className="mt-4 max-w-[36ch] text-lg text-ink">{home.hero.sub}</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <ButtonLink href={cta.primary.href}>{cta.primary.label}</ButtonLink>
-            <ButtonLink href={`tel:${site.phoneTel}`} variant="secondary">
-              Appeler le {site.phoneDisplay}
-            </ButtonLink>
-            <ButtonLink href={cta.secondary.href} variant="secondary">
-              {cta.secondary.label}
-            </ButtonLink>
+      <section className="hero-studio relative overflow-hidden bg-white md:min-h-[calc(100vh-72px)]">
+        <div className="relative aspect-[16/10] md:absolute md:inset-0 md:aspect-auto">
+          <Image
+            src={heroPhoto}
+            alt="Bouche de ventilation et plume immobile"
+            fill
+            priority
+            placeholder="blur"
+            sizes="(max-width: 768px) 100vw, 1536px"
+            className="object-cover object-[62%_42%] md:object-[72%_48%]"
+          />
+        </div>
+        <div className="relative z-10 mx-auto max-w-[1200px] md:flex md:min-h-[calc(100vh-72px)] md:items-center md:px-8 md:py-16">
+          <div className="hero-panel px-5 py-8">
+            <p className="text-[13px] font-medium tracking-wide text-navy">
+              {home.hero.eyebrow}
+            </p>
+            <h1 className="mt-3 font-display text-[34px] font-semibold tracking-tight text-[#1B3147] sm:text-[42px] lg:text-[48px] lg:leading-[1.12]">
+              {home.hero.h1}
+            </h1>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <ButtonLink href={cta.primary.href}>{cta.primary.label}</ButtonLink>
+              <ButtonLink href={`tel:${site.phoneTel}`} variant="secondary">
+                Appeler le {site.phoneDisplay}
+              </ButtonLink>
+            </div>
+            <p className="mt-3">
+              <Link
+                href={cta.secondary.href}
+                className="tap text-[15px] font-medium text-primary underline underline-offset-4 hover:text-primary-hover"
+              >
+                {cta.secondary.label}
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -108,7 +116,7 @@ export default function HomePage() {
             {home.why.items.map((item) => (
               <div key={item.title} className="py-6">
                 <h3 className="text-[17px] font-semibold text-navy">{item.title}</h3>
-                <p className="mt-2 text-[15px] text-ink-secondary">{item.text}</p>
+                <p className="mt-2 text-[17px] text-ink-secondary">{item.text}</p>
               </div>
             ))}
           </div>
@@ -131,16 +139,16 @@ export default function HomePage() {
                   name={item.icon}
                   className="mt-0.5 size-[18px] text-primary"
                 />
-                <Link href={item.href} className="hover:text-primary">
+                <Link href={item.href} className="tap -my-3 hover:text-primary">
                   {item.title}
                 </Link>
               </dt>
-              <dd className="text-[15px] text-ink-secondary">{item.text}</dd>
+              <dd className="text-[17px] text-ink-secondary">{item.text}</dd>
             </div>
           ))}
         </dl>
         <p className="mt-8">
-          <Link href={home.expertise.allHref} className="text-[15px] text-primary hover:text-primary-hover">
+          <Link href={home.expertise.allHref} className="tap text-[15px] text-primary hover:text-primary-hover">
             {home.expertise.allLabel}
           </Link>
         </p>
@@ -164,7 +172,7 @@ export default function HomePage() {
                 />
                 {step.title}
               </h3>
-              <p className="mt-1 pl-8 text-[15px] text-ink-secondary">{step.text}</p>
+              <p className="mt-1 pl-8 text-[17px] text-ink-secondary">{step.text}</p>
             </li>
           ))}
         </ol>
@@ -175,12 +183,12 @@ export default function HomePage() {
         <h2 className="text-[24px] font-semibold text-navy md:text-[32px]">
           {home.team.title}
         </h2>
-        <p className="mt-4 max-w-[48ch] text-[17px] text-ink-secondary">{home.team.lead}</p>
+        <p className="callout-brt mt-4 max-w-[68ch] text-[17px]">{home.team.lead}</p>
         <ProfileSections surface="inset" />
         <p className="mt-6">
           <Link
             href={home.team.href}
-            className="text-[15px] text-primary hover:text-primary-hover"
+            className="tap text-[15px] text-primary hover:text-primary-hover"
           >
             {home.team.linkLabel}
           </Link>
@@ -197,7 +205,7 @@ export default function HomePage() {
               <summary className="cursor-pointer list-none text-[17px] font-medium text-navy marker:content-none [&::-webkit-details-marker]:hidden">
                 {item.q}
               </summary>
-              <p className="mt-3 text-[15px] text-ink-secondary">{item.a}</p>
+              <p className="mt-3 text-[17px] text-ink-secondary">{item.a}</p>
             </details>
           ))}
         </div>

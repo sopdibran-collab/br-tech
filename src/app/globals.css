@@ -7,7 +7,7 @@
   --brt-primary-subtle: #e8f1f8;
   --brt-navy: #1b3147;
   --brt-ink: #2a2f36;
-  --brt-ink-secondary: #5c6670;
+  --brt-ink-secondary: #334155;
   --brt-ink-muted: #5f6a74;
   --brt-line: #c9d3dc;
   --brt-surface: #ffffff;
@@ -53,7 +53,7 @@ body {
   color: var(--brt-ink);
   font-family: var(--font-ibm-plex-sans), system-ui, sans-serif;
   font-size: 17px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 h1,
@@ -93,26 +93,45 @@ h3,
   box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--brt-primary);
 }
 
-/* Voile neige pour un hero photo intérieur : le titre reste lisible à gauche. */
-.page-hero-veil {
-  background: linear-gradient(
-    90deg,
-    rgb(247 249 251 / 0.97) 0%,
-    rgb(247 249 251 / 0.92) 28%,
-    rgb(247 249 251 / 0.42) 52%,
-    rgb(247 249 251 / 0) 74%
-  );
+
+
+
+
+/* Hero : panneau lisible posé sur la photo (desktop), texte sous la photo (mobile). */
+.hero-panel {
+  background: #ffffff;
 }
 
-@media (max-width: 767px) {
-  .page-hero-veil {
-    background: linear-gradient(
-      180deg,
-      rgb(247 249 251 / 0.97) 0%,
-      rgb(247 249 251 / 0.9) 36%,
-      rgb(247 249 251 / 0.28) 70%,
-      rgb(247 249 251 / 0) 100%
-    );
+@media (min-width: 768px) {
+  .hero-panel {
+    max-width: 560px;
+    padding: 40px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 32px rgba(27, 49, 71, 0.12);
   }
 }
 
+/* Texte courant : largeur de ligne et contraste. */
+.prose-brt {
+  max-width: 68ch;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #334155;
+}
+
+.callout-brt {
+  background: #f1f5f9;
+  border-left: 3px solid #0e4a8c;
+  padding: 16px 20px;
+  color: #1b3147;
+}
+
+/* Cible tactile minimale de 44 px pour les petits liens. */
+.tap {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
