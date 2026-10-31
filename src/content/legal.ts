@@ -11,6 +11,12 @@ export const mentions = {
     "Le site présente les prestations de ventilation de l’entreprise. Aucune information n’est fournie à titre de conseil juridique ou normatif opposable.",
     "Hébergement du site : Vercel. Nom de domaine et messagerie : Infomaniak.",
   ],
+  credit: {
+    heading: "Conception du site",
+    label: "Site, développement et référencement :",
+    name: "Dibran Sopjani",
+    href: "https://www.linkedin.com/in/dibransop",
+  },
 };
 
 export const privacy = {

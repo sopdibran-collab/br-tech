@@ -17,6 +17,20 @@ export default function MentionsPage() {
           <p key={p.slice(0, 40)}>{p}</p>
         ))}
       </div>
+      <section className="mt-10">
+        <h2 className="text-[20px] font-semibold text-navy">{mentions.credit.heading}</h2>
+        <p className="mt-4 text-[16px] text-ink-secondary">
+          {mentions.credit.label}{" "}
+          <a
+            href={mentions.credit.href}
+            target="_blank"
+            rel="noopener"
+            className="underline underline-offset-2 hover:text-navy"
+          >
+            {mentions.credit.name}
+          </a>
+        </p>
+      </section>
     </article>
   );
 }

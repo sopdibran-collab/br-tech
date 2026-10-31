@@ -1,3 +1,4 @@
+import { mentions } from "@/content/legal";
 import Image from "next/image";
 import Link from "next/link";
 import { footerGroups, formatAddress, site } from "@/config/site";
@@ -65,6 +66,17 @@ export function Footer() {
               {item.label}
             </Link>
           ))}
+        </div>
+        <div className="mx-auto max-w-[1200px] px-5 pb-2 text-[10px] text-white/70 md:px-8">
+          {mentions.credit.label}{" "}
+          <a
+            href={mentions.credit.href}
+            target="_blank"
+            rel="noopener"
+            className="inline-flex min-h-[44px] items-center underline-offset-2 hover:text-white/80 hover:underline"
+          >
+            {mentions.credit.name}
+          </a>
         </div>
       </div>
     </footer>
