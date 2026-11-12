@@ -44,7 +44,7 @@ export function MapEmbed({
           href={linkHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary hover:underline"
+          className="tap text-primary hover:underline"
         >
           Ouvrir dans Google Maps
           <span className="sr-only"> (nouvel onglet)</span>

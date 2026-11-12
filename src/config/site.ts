@@ -83,14 +83,20 @@ export const serviceNavLive: readonly NavItem[] = [
 
 export const navigationRoutes: readonly NavItem[] = [
   { label: "Services", href: "/services", children: serviceNavLive },
-  { label: "Secteurs", href: "/#secteurs" },
   { label: "Maintenance", href: "/maintenance" },
   { label: "À propos", href: "/a-propos" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
+/** Liens du pied de page : « Secteurs » y reste (retiré du menu seulement). */
 export const footerGroups = {
-  navigation: navigationRoutes,
+  navigation: [
+    { label: "Services", href: "/services" },
+    { label: "Secteurs", href: "/#secteurs" },
+    { label: "Maintenance", href: "/maintenance" },
+    { label: "À propos", href: "/a-propos" },
+    { label: "Contact", href: "/contact" },
+  ],
   services: [
     { label: "Installation", href: "/services/installation" },
     { label: "Double flux", href: "/services/double-flux" },

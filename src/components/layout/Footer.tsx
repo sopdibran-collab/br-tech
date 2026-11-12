@@ -7,7 +7,7 @@ function Chip({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="inline-flex min-h-[44px] items-center rounded-[2px] border border-white/15 px-3 text-[11px] text-white/80 hover:border-white/40 hover:text-white"
+      className="inline-flex min-h-[44px] items-center rounded-[2px] border border-white/15 px-3 text-[13px] leading-[1.5] text-white/80 hover:border-white/40 hover:text-white"
     >
       {label}
     </Link>
@@ -29,13 +29,13 @@ export function Footer() {
             className="h-8 w-auto"
             unoptimized
           />
-          <p className="text-[11px] text-white/70">{site.signature}</p>
-          <p className="text-[11px] text-white/70">{address}</p>
-          <p className="text-[11px] text-white/70">{site.hours.compact}</p>
-          <a href={`tel:${site.phoneTel}`} className="inline-flex min-h-[44px] items-center px-1 text-[11px] text-white/80 hover:text-white">
+          <p className="text-[13px] leading-[1.5] text-white/70">{site.signature}</p>
+          <p className="text-[14px] leading-[1.5] text-white/80">{address}</p>
+          <p className="text-[13px] leading-[1.5] text-white/70">{site.hours.compact}</p>
+          <a href={`tel:${site.phoneTel}`} className="inline-flex min-h-[44px] items-center px-1 text-[14px] leading-[1.5] text-white/80 hover:text-white">
             {site.phoneDisplay}
           </a>
-          <a href={`mailto:${site.email}`} className="inline-flex min-h-[44px] items-center px-1 text-[11px] text-white/80 hover:text-white">
+          <a href={`mailto:${site.email}`} className="inline-flex min-h-[44px] items-center px-1 text-[14px] leading-[1.5] text-white/80 hover:text-white">
             {site.email}
           </a>
         </div>
@@ -47,7 +47,7 @@ export function Footer() {
             ))}
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-[10px] uppercase tracking-wider text-white/70">
+            <span className="text-[12px] uppercase leading-[1.5] tracking-wider text-white/70">
               Prestations
             </span>
             {footerGroups.services.map((item) => (
@@ -57,7 +57,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-2 gap-y-2 px-5 py-1 text-[10px] text-white/70 md:px-8">
+        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-2 gap-y-2 px-5 py-1 text-[12px] leading-[1.5] text-white/70 md:px-8">
           <span>
             © {new Date().getFullYear()} {site.legalName}
           </span>
@@ -67,7 +67,7 @@ export function Footer() {
             </Link>
           ))}
         </div>
-        <div className="mx-auto max-w-[1200px] px-5 pb-2 text-[10px] text-white/70 md:px-8">
+        <div className="mx-auto max-w-[1200px] px-5 pb-2 text-[12px] leading-[1.5] text-white/70 md:px-8">
           {mentions.credit.label}{" "}
           <a
             href={mentions.credit.href}

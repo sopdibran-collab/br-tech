@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, FileText, Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useState } from "react";
@@ -11,7 +11,7 @@ import { cn } from "@/lib/cn";
 function DesktopItem({ item }: { item: NavItem }) {
   if (!item.children?.length) {
     return (
-      <Link href={item.href} className="text-[14px] font-medium text-ink hover:text-primary">
+      <Link href={item.href} className="inline-flex min-h-[44px] items-center text-[14px] font-medium text-ink hover:text-primary">
         {item.label}
       </Link>
     );
@@ -21,7 +21,7 @@ function DesktopItem({ item }: { item: NavItem }) {
     <div className="group relative">
       <Link
         href={item.href}
-        className="inline-flex items-center gap-1 text-[14px] font-medium text-ink hover:text-primary"
+        className="inline-flex min-h-[44px] items-center gap-1 text-[14px] font-medium text-ink hover:text-primary"
       >
         {item.label}
         <ChevronDown className="size-3.5" strokeWidth={1.75} aria-hidden />
@@ -107,7 +107,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 h-16 border-b border-line bg-white md:h-[72px]">
       <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between gap-4 px-5 md:px-8">
-        <Link href="/" className="flex shrink-0 items-center" aria-label="BR Tech — accueil">
+        <Link href="/" className="flex min-h-[44px] shrink-0 items-center" aria-label="BR Tech — accueil">
           <Image
             src="/logo/horizontal.svg"
             alt=""
@@ -197,6 +197,24 @@ export function SiteHeader() {
                 />
               ))}
             </nav>
+            <div className="mt-auto flex flex-col gap-2 border-t border-line p-3">
+              <a
+                href={cta.call.href}
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-[4px] border border-primary px-4 text-[15px] font-medium text-primary hover:bg-primary-subtle"
+                onClick={() => setOpen(false)}
+              >
+                <Phone className="size-4" strokeWidth={1.75} aria-hidden />
+                {site.phoneDisplay}
+              </a>
+              <Link
+                href={cta.primary.href}
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-[4px] bg-primary px-4 text-[15px] font-medium text-white hover:bg-primary-hover"
+                onClick={() => setOpen(false)}
+              >
+                <FileText className="size-4" strokeWidth={1.75} aria-hidden />
+                {cta.primary.label}
+              </Link>
+            </div>
           </div>
         </div>
       ) : null}

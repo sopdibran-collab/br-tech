@@ -25,7 +25,7 @@ export default function MentionsPage() {
             href={mentions.credit.href}
             target="_blank"
             rel="noopener"
-            className="underline underline-offset-2 hover:text-navy"
+            className="tap -my-2 underline underline-offset-2 hover:text-navy"
           >
             {mentions.credit.name}
           </a>

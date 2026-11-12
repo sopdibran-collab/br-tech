@@ -1,5 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 import { Breadcrumbs, type Crumb } from "@/components/layout/Breadcrumbs";
+import { cn } from "@/lib/cn";
 
 export function PageHero({
   image,
@@ -8,6 +9,7 @@ export function PageHero({
   title,
   lead,
   objectPosition = "center",
+  hideImageOnMobile = false,
 }: {
   image: StaticImageData;
   alt: string;
@@ -15,10 +17,17 @@ export function PageHero({
   title: string;
   lead?: string;
   objectPosition?: string;
+  /** Masque la photo sous 768 px (le contenu utile remonte au premier écran). */
+  hideImageOnMobile?: boolean;
 }) {
   return (
     <section className="relative overflow-hidden bg-white md:min-h-[28rem] lg:min-h-[32rem]">
-      <div className="relative aspect-[16/10] md:absolute md:inset-0 md:aspect-auto">
+      <div
+        className={cn(
+          "relative aspect-[16/10] md:absolute md:inset-0 md:block md:aspect-auto",
+          hideImageOnMobile && "hidden",
+        )}
+      >
         <Image
           src={image}
           alt={alt}

@@ -7,27 +7,42 @@ import { cta } from "@/config/site";
 
 const hiddenRoutes = new Set(["/contact", "/merci"]);
 
+/**
+ * La barre apparaît une fois les boutons du hero ([data-hero-cta]) sortis de
+ * l'écran : elle ne les recouvre jamais (ex. /services/depannage à 320 px).
+ * Sans boutons dans le hero, elle est visible tout de suite.
+ */
 export function StickyMobileCta() {
   const pathname = usePathname();
-  const [pastFirstScreen, setPastFirstScreen] = useState(false);
+  const [heroCtaOnScreen, setHeroCtaOnScreen] = useState(true);
   const suppressed = hiddenRoutes.has(pathname);
 
   useEffect(() => {
-    if (pathname !== "/") return;
-
-    const onScroll = () => {
-      setPastFirstScreen(window.scrollY > window.innerHeight * 0.9);
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const frame = window.requestAnimationFrame(onScroll);
+    let observer: IntersectionObserver | undefined;
+    const frame = window.requestAnimationFrame(() => {
+      const targets = document.querySelectorAll("[data-hero-cta]");
+      if (!targets.length) {
+        setHeroCtaOnScreen(false);
+        return;
+      }
+      const onScreen = new Set<Element>();
+      observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) onScreen.add(entry.target);
+            else onScreen.delete(entry.target);
+          }
+          setHeroCtaOnScreen(onScreen.size > 0);
+        });
+      targets.forEach((target) => observer?.observe(target));
+    });
     return () => {
       window.cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", onScroll);
+      observer?.disconnect();
     };
   }, [pathname]);
 
-  const visible = !suppressed && (pathname !== "/" || pastFirstScreen);
+  const visible = !suppressed && !heroCtaOnScreen;
   if (!visible) return null;
 
   return (

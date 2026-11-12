@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image";
+
 export type FaqItem = {
   q: string;
   a: string;
@@ -34,4 +36,6 @@ export type ServicePageContent = {
   faq: readonly FaqItem[];
   related: readonly RelatedLink[];
   includeLausanne?: boolean;
+  /** Photo réelle de chantier BR Tech. Rien n'est affiché tant qu'elle manque. */
+  photo?: { src: StaticImageData; alt: string };
 };

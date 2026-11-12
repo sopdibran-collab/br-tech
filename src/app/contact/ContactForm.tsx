@@ -13,7 +13,7 @@ import { contactCopy } from "@/content/contact";
 import { cn } from "@/lib/cn";
 
 const fieldClass =
-  "h-12 w-full rounded-[2px] border border-line bg-white px-4 text-[16px] text-ink placeholder:text-ink-muted focus:border-primary";
+  "h-12 w-full rounded-[2px] border border-field-border bg-white px-4 text-[16px] text-ink placeholder:text-ink-muted focus:border-primary focus:shadow-[inset_0_0_0_1px_var(--brt-primary)]";
 
 export function ContactForm({ defaultType }: { defaultType?: string }) {
   const [state, action, pending] = useActionState(
@@ -152,7 +152,7 @@ export function ContactForm({ defaultType }: { defaultType?: string }) {
             required
             aria-invalid={errors.consent ? true : undefined}
             aria-describedby={errors.consent ? "consent-error" : undefined}
-            className="consent-check mt-0.5 shrink-0 rounded-[2px] border border-line accent-primary"
+            className="consent-check mt-0.5 shrink-0 rounded-[2px] border border-field-border accent-primary"
           />
           <span>
             {contactCopy.consent}

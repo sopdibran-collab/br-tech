@@ -65,20 +65,12 @@ export default function HomePage() {
             <h1 className="mt-3 font-display text-[34px] font-semibold tracking-tight text-[#1B3147] sm:text-[42px] lg:text-[48px] lg:leading-[1.12]">
               {home.hero.h1}
             </h1>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div data-hero-cta className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href={cta.primary.href}>{cta.primary.label}</ButtonLink>
               <ButtonLink href={`tel:${site.phoneTel}`} variant="secondary">
                 Appeler le {site.phoneDisplay}
               </ButtonLink>
             </div>
-            <p className="mt-3">
-              <Link
-                href={cta.secondary.href}
-                className="tap text-[15px] font-medium text-primary underline underline-offset-4 hover:text-primary-hover"
-              >
-                {cta.secondary.label}
-              </Link>
-            </p>
           </div>
         </div>
       </section>
@@ -202,7 +194,7 @@ export default function HomePage() {
         <div className="mt-8 max-w-[40rem] divide-y divide-line border-y border-line">
           {home.faq.items.map((item) => (
             <details key={item.q} className="py-4">
-              <summary className="cursor-pointer list-none text-[17px] font-medium text-navy marker:content-none [&::-webkit-details-marker]:hidden">
+              <summary className="-my-2 cursor-pointer list-none py-2 text-[17px] font-medium text-navy marker:content-none [&::-webkit-details-marker]:hidden">
                 {item.q}
               </summary>
               <p className="mt-3 text-[17px] text-ink-secondary">{item.a}</p>

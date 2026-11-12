@@ -36,7 +36,7 @@ export default function MerciPage() {
         <p className="mt-3 text-[15px]">
           <a
             href={`tel:${site.phoneTel}`}
-            className="text-primary hover:underline"
+            className="tap -my-2 text-primary hover:underline"
           >
             {site.phoneDisplay}
           </a>
@@ -44,7 +44,7 @@ export default function MerciPage() {
         <p className="mt-2 text-[15px]">
           <a
             href={`mailto:${site.email}`}
-            className="text-primary hover:underline"
+            className="tap -my-2 text-primary hover:underline"
           >
             {site.email}
           </a>
