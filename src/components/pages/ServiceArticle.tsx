@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ContentSection } from "@/components/layout/ContentSection";
@@ -66,7 +67,7 @@ export function ServiceArticle({
             {content.h1}
           </h1>
           <p className="prose-brt mt-5 text-ink">{content.lead}</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div data-hero-cta className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             {isDepannage ? (
               <>
                 <ButtonLink href={cta.call.href}>{cta.call.label}</ButtonLink>
@@ -85,6 +86,17 @@ export function ServiceArticle({
               </>
             )}
           </div>
+          {content.photo ? (
+            <figure className="mt-10 max-w-[48rem] overflow-hidden rounded-[4px]">
+              <Image
+                src={content.photo.src}
+                alt={content.photo.alt}
+                placeholder="blur"
+                sizes="(max-width: 768px) 100vw, 768px"
+                className="h-auto w-full"
+              />
+            </figure>
+          ) : null}
         </ContentSection>
 
         <ContentSection muted={isMuted(1)}>
@@ -135,7 +147,7 @@ export function ServiceArticle({
           <div className="mt-6 divide-y divide-line border-y border-line">
             {content.faq.map((item) => (
               <details key={item.q} className="py-4">
-                <summary className="cursor-pointer list-none text-[17px] font-medium text-navy marker:content-none [&::-webkit-details-marker]:hidden">
+                <summary className="-my-2 cursor-pointer list-none py-2 text-[17px] font-medium text-navy marker:content-none [&::-webkit-details-marker]:hidden">
                   {item.q}
                 </summary>
                 <p className="mt-3 text-[17px] text-ink-secondary">{item.a}</p>

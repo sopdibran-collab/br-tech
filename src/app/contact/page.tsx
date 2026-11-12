@@ -43,6 +43,7 @@ export default async function ContactPage({
         image={roofOutletPhoto}
         alt={contactCopy.heroAlt}
         objectPosition="62% 42%"
+        hideImageOnMobile
         crumbs={[
           { label: "Accueil", href: "/" },
           { label: "Contact" },
@@ -50,10 +51,11 @@ export default async function ContactPage({
         title={contactCopy.title}
         lead={contactCopy.lead}
       />
-      <div className="mx-auto grid max-w-[1200px] gap-12 px-5 py-14 md:grid-cols-12 md:px-8 md:py-20">
+      <div className="mx-auto grid max-w-[1200px] gap-12 px-5 pb-14 pt-2 md:grid-cols-12 md:px-8 md:py-20">
         <div className="md:col-span-7">
-          <p className="text-[15px] text-ink">{contactCopy.aeo}</p>
-          <div className="mt-8">
+          {/* Mobile : une seule intro (celle du hero), le formulaire remonte. */}
+          <p className="hidden text-[15px] text-ink md:block">{contactCopy.aeo}</p>
+          <div className="md:mt-8">
             <ContactForm defaultType={type} />
           </div>
         </div>
@@ -62,12 +64,12 @@ export default async function ContactPage({
             <h2 className="text-[18px] font-semibold text-navy">{site.legalName}</h2>
             <p className="mt-3 text-[15px] text-ink-secondary">{address}</p>
             <p className="mt-3 text-[15px]">
-              <a href={`tel:${site.phoneTel}`} className="text-primary hover:underline">
+              <a href={`tel:${site.phoneTel}`} className="tap -my-2 text-primary hover:underline">
                 {site.phoneDisplay}
               </a>
             </p>
             <p className="mt-2 text-[15px]">
-              <a href={`mailto:${site.email}`} className="text-primary hover:underline">
+              <a href={`mailto:${site.email}`} className="tap -my-2 text-primary hover:underline">
                 {site.email}
               </a>
             </p>

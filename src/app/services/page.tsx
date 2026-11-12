@@ -51,7 +51,7 @@ export default function ServicesHubPage() {
                   <dt>
                     <Link
                       href={item.href}
-                      className="text-[18px] font-semibold text-navy hover:text-primary"
+                      className="tap -my-2 text-[18px] font-semibold text-navy hover:text-primary"
                     >
                       {item.title}
                     </Link>
@@ -81,7 +81,7 @@ export default function ServicesHubPage() {
             />
             <Link
               href={servicesHub.maintenance.href}
-              className="text-primary hover:text-primary-hover"
+              className="tap -my-2 text-primary hover:text-primary-hover"
             >
               {servicesHub.maintenance.title}
             </Link>
@@ -104,7 +104,7 @@ export default function ServicesHubPage() {
                 <div>
                   <Link
                     href={item.href}
-                    className="text-[16px] font-medium text-navy hover:text-primary"
+                    className="tap -my-2 text-[16px] font-medium text-navy hover:text-primary"
                   >
                     {item.title}
                   </Link>
