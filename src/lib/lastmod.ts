@@ -1,8 +1,5 @@
 import { execFileSync } from "node:child_process";
 
-/** Instantané du build, utilisé seulement si l’historique git n’est pas fiable. */
-const buildDate = new Date();
-
 function gitHistoryIsComplete(): boolean {
   try {
     const inside = execFileSync("git", ["rev-parse", "--is-inside-work-tree"], {
@@ -24,23 +21,28 @@ function gitHistoryIsComplete(): boolean {
 
 const gitDatesAreReliable = gitHistoryIsComplete();
 
-function lastCommitDate(files: readonly string[]): Date | null {
+function lastCommitDate(files: readonly string[]): Date | undefined {
   try {
     const iso = execFileSync(
       "git",
       ["log", "-1", "--format=%cI", "--", ...files],
       { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] },
     ).trim();
-    if (!iso) return null;
+    if (!iso) return undefined;
     const date = new Date(iso);
-    return Number.isNaN(date.getTime()) ? null : date;
+    return Number.isNaN(date.getTime()) ? undefined : date;
   } catch {
-    return null;
+    return undefined;
   }
 }
 
-/** Dernier commit des fichiers de la page, ou la date de build si git ne peut pas la donner. */
-export function pageLastModified(files: readonly string[]): Date {
-  if (!gitDatesAreReliable) return buildDate;
-  return lastCommitDate(files) ?? buildDate;
+/**
+ * Retourne lastmod uniquement si l’historique Git permet de dater réellement
+ * les fichiers. Une date de build n’est pas une date de modification de page.
+ */
+export function pageLastModified(
+  files: readonly string[],
+): Date | undefined {
+  if (!gitDatesAreReliable) return undefined;
+  return lastCommitDate(files);
 }
