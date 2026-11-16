@@ -24,7 +24,9 @@ export function areaServedOrg() {
 
 export function organizationNode() {
   return {
-    "@type": ["Organization", "HVACBusiness"],
+    // BR Tech's published scope is ventilation; avoid HVACBusiness, whose
+    // definition also implies heating and air-conditioning services.
+    "@type": ["Organization", "HomeAndConstructionBusiness"],
     "@id": `${site.url}/#org`,
     name: site.legalName,
     url: site.url,
