@@ -24,7 +24,8 @@ export function areaServedOrg() {
 
 export function organizationNode() {
   return {
-    "@type": ["Organization", "HVACBusiness"],
+    // Type générique du bâtiment : ne pas suggérer chauffage et climatisation.
+    "@type": "HomeAndConstructionBusiness",
     "@id": `${site.url}/#org`,
     name: site.legalName,
     url: site.url,

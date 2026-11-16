@@ -3,9 +3,9 @@ import { site } from "@/config/site";
 import { pageLastModified } from "@/lib/lastmod";
 
 /**
- * lastmod = dernier commit des fichiers de la page, quand l’historique git
- * est complet au moment du build. Sinon (pas de git, clone shallow, date
- * illisible) : date du build. /merci est noindex : elle n’est pas listée.
+ * lastmod = dernier commit des fichiers de la page, uniquement quand
+ * l’historique git est complet. Sans date fiable, la propriété est omise.
+ * /merci est noindex : elle n’est pas listée.
  */
 const routes: {
   path: string;
@@ -93,10 +93,14 @@ const routes: {
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
-    url: `${site.url}${route.path}`,
-    lastModified: pageLastModified(route.files),
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
-  }));
+  return routes.map((route) => {
+    const lastModified = pageLastModified(route.files);
+
+    return {
+      url: `${site.url}${route.path}`,
+      ...(lastModified ? { lastModified } : {}),
+      changeFrequency: route.changeFrequency,
+      priority: route.priority,
+    };
+  });
 }
